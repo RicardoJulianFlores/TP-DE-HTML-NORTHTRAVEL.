@@ -1,326 +1,317 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinos — NorthTravel Turismo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/destinos.css">
+    <meta charset="UTF-8">
+    <title>Turismo Jujuy - Destinos</title>
+    <!-- Sin etiqueta viewport para forzar diseño fijo de 1200px -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navegación Principal">
+            <div class="logo-container">
+                <a href="index.html" class="logo" aria-label="Inicio - Jujuy Turismo">Jujuy Turismo</a>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" aria-label="Ir a la página de inicio">Inicio</a>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="destinos.html" aria-label="Ver destinos turísticos">Destinos</a>
+                    <!-- Contenedor del Mega-menú -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Cultural</h3>
+                            <ul>
+                                <li><a href="#">Pucará de Tilcara</a></li>
+                                <li><a href="#">Patrimonio Histórico</a></li>
+                                <li><a href="#">Museos Arqueológicos</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>De Naturaleza</h3>
+                            <ul>
+                                <li><a href="#">Parque Nacional Calilegua</a></li>
+                                <li><a href="#">Serranía del Hornocal</a></li>
+                                <li><a href="#">Reserva de la Biósfera</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Sol y Playa</h3>
+                            <ul>
+                                <li><a href="#">Dique La Ciénaga</a></li>
+                                <li><a href="#">Dique Las Maderas</a></li>
+                                <li><a href="#">Balnearios de Yala</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Gastronómico</h3>
+                            <ul>
+                                <li><a href="#">Ruta del Vino Jujeño</a></li>
+                                <li><a href="#">Platos Andinos</a></li>
+                                <li><a href="#">Mercados Tradicionales</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Religioso</h3>
+                            <ul>
+                                <li><a href="#">Peregrinación a Punta Corral</a></li>
+                                <li><a href="#">Catedral de San Salvador</a></li>
+                                <li><a href="#">Iglesias Coloniales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="agencias.html" aria-label="Ver agencias de turismo">Agencias</a>
+                    <!-- Contenedor del Mega-menú Agencias -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Excursiones Tradicionales</h3>
+                            <ul>
+                                <li><a href="#">Tour por la ciudad San Salvador</a></li>
+                                <li><a href="#">Full Dia en la Quebrada de Humahuaca</a></li>
+                                <li><a href="#">Visita a Salinas Grandes</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Turismo Comunitario</h3>
+                            <ul>
+                                <li><a href="#">Experiencia Artesanos Locales</a></li>
+                                <li><a href="#">Caravana de Llamas</a></li>
+                                <li><a href="#">Convivencia Rural</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Turismo de Aventura</h3>
+                            <ul>
+                                <li><a href="#">Trekking y Senderismo</a></li>
+                                <li><a href="#">Sandboard en El Huancar</a></li>
+                                <li><a href="#">Travesías en 4x4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="precios.html" aria-label="Ver precios y tarifas">Precios</a>
+                    <!-- Contenedor del Mega-menú Precios -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Paquetes Familiares</h3>
+                            <ul>
+                                <li><a href="#">Viajes de 7 Días</a></li>
+                                <li><a href="#">Vacaciones de Invierno</a></li>
+                                <li><a href="#">Valles todo incluido</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Mochileros / Low Cost</h3>
+                            <ul>
+                                <li><a href="#">Hostels y Refugios</a></li>
+                                <li><a href="#">Transporte Económico</a></li>
+                                <li><a href="#">Menú del Día</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Promociones</h3>
+                            <ul>
+                                <li><a href="#">Descuentos Temporada Baja</a></li>
+                                <li><a href="#">Residentes Argentinos</a></li>
+                                <li><a href="#">Promos 2x1 en Excursiones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" aria-label="Ir a la página de contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="main-content">
 
-<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
-  <a href="index.html" class="nav-logo" aria-label="NorthTravel - Inicio">
-    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
-  </a>
-  <div class="nav-links" role="menubar">
-    <div class="nav-item" role="none">
-      <a class="nav-link active" href="destinos.html" role="menuitem" aria-haspopup="true">
-        Destinos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu" role="menu" aria-label="Submenú Destinos">
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
-        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
-      </div>
-    </div>
-    <div class="nav-item" role="none">
-      <a class="nav-link" href="agencias.html" role="menuitem" aria-haspopup="true">
-        Agencias
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu" role="menu">
-        <a class="mega-item" href="agencias.html" role="menuitem"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
-        <a class="mega-item" href="agencias.html" role="menuitem"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
-        <a class="mega-item" href="contacto.html" role="menuitem"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
-        <a class="mega-item" href="agencias.html" role="menuitem"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
-      </div>
-    </div>
-    <a class="nav-link" href="index.html" role="menuitem">Inicio</a>
-    <div class="nav-item" role="none">
-      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
-        Precios
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
-      </div>
-    </div>
-    <a class="nav-link" href="blog.html" role="menuitem">Blog</a>
-  </div>
-  <div class="nav-actions">
-    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
-    <a href="contacto.html" class="btn btn-primary">Reservar</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</nav>
+        <!-- Sección de Título de Página -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="section-container">
+                <h1 id="page-title" class="section-title">Explorá Nuestros Destinos</h1>
+                <p class="section-subtitle">Filtrá por categorías y descubrí los rincones más hermosos de Jujuy.</p>
+            </div>
+        </section>
 
-<!-- ═══ MAIN ══════════════════════════════ -->
-<main id="main-content">
+        <!-- ================= SISTEMA DE FILTROS Y GALERÍA (CSS PURO) ================= -->
+        <section class="destinations-filter-section" aria-label="Galería de destinos filtrable">
+            <div class="section-container">
+                
+                <!-- 1. INPUTS OCULTOS (CRÍTICO: Deben ser hermanos del menú visual y la galería) -->
+                <input type="radio" name="category-filter" id="filter-todos" class="filter-radio" checked hidden>
+                <input type="radio" name="category-filter" id="filter-cultural" class="filter-radio" hidden>
+                <input type="radio" name="category-filter" id="filter-naturaleza" class="filter-radio" hidden>
+                <input type="radio" name="category-filter" id="filter-playa" class="filter-radio" hidden>
+                <input type="radio" name="category-filter" id="filter-gastro" class="filter-radio" hidden>
+                <input type="radio" name="category-filter" id="filter-religioso" class="filter-radio" hidden>
 
-  <div class="dest-hero">
-    <p class="section-label">Catálogo completo</p>
-    <h1 class="section-title">Nuestros <em>destinos</em></h1>
-    <p class="section-sub">Filtra por categoría y encuentra tu próxima aventura perfecta</p>
-  </div>
+                <!-- 2. MENÚ DE NAVEGACIÓN VISUAL (Labels vinculados a los inputs) -->
+                <nav class="filter-menu" aria-label="Filtros de categorías">
+                    <label for="filter-todos" class="filter-btn">Todos</label>
+                    <label for="filter-cultural" class="filter-btn">Cultural</label>
+                    <label for="filter-naturaleza" class="filter-btn">De Naturaleza</label>
+                    <label for="filter-playa" class="filter-btn">Sol y Playa</label>
+                    <label for="filter-gastro" class="filter-btn">Gastronómico</label>
+                    <label for="filter-religioso" class="filter-btn">Religioso</label>
+                </nav>
 
-  <!-- Filter system (CSS-only) -->
-  <input type="radio" name="destfilter" id="f-all"      class="filter-radio" checked aria-hidden="true">
-  <input type="radio" name="destfilter" id="f-cultural" class="filter-radio" aria-hidden="true">
-  <input type="radio" name="destfilter" id="f-nature"   class="filter-radio" aria-hidden="true">
-  <input type="radio" name="destfilter" id="f-beach"    class="filter-radio" aria-hidden="true">
-  <input type="radio" name="destfilter" id="f-gastro"   class="filter-radio" aria-hidden="true">
-  <input type="radio" name="destfilter" id="f-religious" class="filter-radio" aria-hidden="true">
+                <!-- 3. CONTENEDOR DE GALERÍA MASONRY -->
+                <div class="masonry-gallery">
+                    
+                    <!-- Tarjeta 1: Cultural -->
+                    <article class="destination-card cultural">
+                        <img src="images/pucara tilcara.webp" alt="Ruinas del Pucará de Tilcara" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Pucará de Tilcara</h3>
+                            <p class="card-desc">Antigua fortaleza preincaica que domina la Quebrada de Humahuaca. Un viaje en el tiempo.</p>
+                        </div>
+                    </article>
 
-  <div class="filter-tabs" role="tablist" aria-label="Filtrar destinos por categoría">
-    <label for="f-all"      class="filter-tab" role="tab" tabindex="0">🌐 Todos</label>
-    <label for="f-cultural" class="filter-tab" role="tab" tabindex="0">🏛️ Cultural</label>
-    <label for="f-nature"   class="filter-tab" role="tab" tabindex="0">🌿 Naturaleza</label>
-    <label for="f-beach"    class="filter-tab" role="tab" tabindex="0">🏖️ Sol y Playa</label>
-    <label for="f-gastro"   class="filter-tab" role="tab" tabindex="0">🍽️ Gastronómico</label>
-    <label for="f-religious" class="filter-tab" role="tab" tabindex="0">⛪ Religioso</label>
-  </div>
+                    <!-- Tarjeta 2: De Naturaleza -->
+                    <article class="destination-card naturaleza">
+                        <img src="images/pn calilegua.jpg" alt="Parque Nacional Calilegua" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Parque Nacional Calilegua</h3>
+                            <p class="card-desc">El área protegida más grande de las Yungas. Ideal para trekking y avistaje de fauna.</p>
+                        </div>
+                    </article>
 
-  <!-- Masonry Gallery -->
-  <div class="masonry-grid" role="list" aria-label="Galería de destinos">
+                    <!-- Tarjeta 3: Sol y Playa -->
+                    <article class="destination-card playa">
+                        <img src="images/dique la cienaga.jpg" alt="Dique La Ciénaga" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Dique La Ciénaga</h3>
+                            <p class="card-desc">Espejo de agua perfecto para deportes náuticos, pesca y relax bajo el sol jujeño.</p>
+                        </div>
+                    </article>
 
-    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Patagonia">
-      <img src="assets/patagonia.jpg" alt="patagonia">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Patagonia</p><p class="masonry-tag">Naturaleza • Chile & Argentina</p></div>
-      <div class="card-overlay" aria-hidden="true">
-        <p class="card-overlay-text">Glaciares eternos, pumas salvajes y cielos infinitos. La magia del fin del mundo.</p>
-      </div>
-    </div>
+                    <!-- Tarjeta 4: Gastronómico -->
+                    <article class="destination-card gastro">
+                        <img src="images/vino jujeño .jpg" alt="Viñedos en la Quebrada" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Ruta del Vino Jujeño</h3>
+                            <p class="card-desc">Viñedos de extrema altura. Degustá cepas únicas acompañadas de platos andinos típicos.</p>
+                        </div>
+                    </article>
 
-    <div class="masonry-card medium dest-card-item" data-cat="cultural" role="listitem" tabindex="0" aria-label="Machu Picchu">
-      <img src="assets/machupichu.jpg" alt="Machu Picchu">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Machu Picchu</p><p class="masonry-tag">Cultural • Perú</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Piedras que guardan secretos incas, nubes que abrazan ruinas y un silencio que habla de siglos. El ombligo del mundo andino.</p>
-      </div>
-    </div>
+                    <!-- Tarjeta 5: Religioso -->
+                    <article class="destination-card religioso">
+                        <img src="images/igleasia uquia.jpg" alt="Iglesia de San Francisco de Paula en Uquía" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Iglesia de Uquía</h3>
+                            <p class="card-desc">Monumento Histórico Nacional que resguarda las famosas pinturas de los Ángeles Arcabuceros.</p>
+                        </div>
+                    </article>
 
-    <div class="masonry-card short dest-card-item" data-cat="beach" role="listitem" tabindex="0" aria-label="Cancún">
-      <img src="assets/cancun.jpg" alt="Cancún">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Cancún</p><p class="masonry-tag">Sol y Playa • México</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Aguas turquesas que queman los ojos, arenas blancas y noches que no terminan. El Caribe en su máximo esplendor.</p>
-      </div>
-    </div>
+                    <!-- Tarjeta 6: De Naturaleza -->
+                    <article class="destination-card naturaleza">
+                        <img src="images/hornocal.jpg" alt="Serranía del Hornocal" class="card-img">
+                        <div class="card-overlay">
+                            <h3 class="card-title">Serranía del Hornocal</h3>
+                            <p class="card-desc">Espectacular formación geológica de 14 colores. El mirador más impactante de la provincia.</p>
+                        </div>
+                    </article>
 
-    <div class="masonry-card tall dest-card-item" data-cat="gastro" role="listitem" tabindex="0" aria-label="Buenos Aires">
-      <img src="assets/buenosaires.jpg" alt="Buenos Aires">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Buenos Aires</p><p class="masonry-tag">Gastronómico • Argentina</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">El mejor asado del mundo, tango en la calle y vino Malbec.</p>
-      </div>
-    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="masonry-card medium dest-card-item" data-cat="beach" role="listitem" tabindex="0" aria-label="Cartagena">
-      <img src="assets/cartagena.jpg" alt="Cartagena">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Cartagena</p><p class="masonry-tag">Sol y Playa • Colombia</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Murallas coloniales bañadas por el Caribe. Historia, color y fiesta.</p>
-      </div>
-    </div>
+        <!-- ================= SECCIÓN TABLA DE PRECIOS SEMÁNTICA ================= -->
+        <section class="pricing-table-section" aria-labelledby="table-title">
+            <div class="section-container">
+                <h2 id="table-title" class="section-title">Comparativa de Destinos Sugeridos</h2>
+                <table class="destinations-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Destino</th>
+                            <th scope="col">Tipo de Turismo</th>
+                            <th scope="col">Duración Recomendada</th>
+                            <th scope="col">Precio Estimado (ARS)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Quebrada de Humahuaca</th>
+                            <td>Cultural / Naturaleza</td>
+                            <td>3 - 4 Días</td>
+                            <td>$ 150.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Salinas Grandes</th>
+                            <td>Naturaleza / Fotografía</td>
+                            <td>1 Día</td>
+                            <td>$ 45.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Reserva Biosfera Yungas</th>
+                            <td>Aventura / Naturaleza</td>
+                            <td>2 Días</td>
+                            <td>$ 80.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Diques de El Carmen</th>
+                            <td>Sol y Playa / Relax</td>
+                            <td>1 Día</td>
+                            <td>$ 30.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Amazonia">
-      <img src="assets/amazonia.jpg" alt="Amazonia">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Amazonia</p><p class="masonry-tag">Naturaleza • Brasil</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Un millón de especies, ríos sin fin y una selva que respira por el planeta. La naturaleza en su estado más puro y salvaje.</p>
-      </div>
-    </div>
+    </main>
 
-    <div class="masonry-card medium dest-card-item" data-cat="religious" role="listitem" tabindex="0" aria-label="Cusco Sagrado">
-      <img src="assets/cuscosagrado.webp" alt="Cusco Sagrado">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Cusco Sagrado</p><p class="masonry-tag">Religioso • Perú</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Capital del Imperio Inca, ciudad de templos y procesiones milenarias.</p>
-      </div>
-    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Columna 1: Enlaces y Redes Sociales -->
+            <div class="footer-column social-section">
+                <h3>Conectá con Nosotros</h3>
+                <ul class="social-links">
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Facebook">Facebook</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Instagram">Instagram</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Twitter">Twitter</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro canal de YouTube">YouTube</a></li>
+                </ul>
+            </div>
 
-    <div class="masonry-card short dest-card-item" data-cat="cultural" role="listitem" tabindex="0" aria-label="Quito Colonial">
-      <img src="assets/quito.jpg" alt="Quito Colonial">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Quito Colonial</p><p class="masonry-tag">Cultural • Ecuador</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Iglesias doradas, calles empedradas y el olor a historia en cada esquina. La ciudad más cercana al cielo.</p>
-      </div>
-    </div>
+            <!-- Columna 2: Formulario de Newsletter -->
+            <div class="footer-column newsletter-section">
+                <h3>Suscribite a nuestro Newsletter</h3>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" aria-label="Ingresá tu correo electrónico" required>
+                    <button type="submit" class="btn-submit" aria-label="Botón para suscribirse al newsletter">Suscribirme</button>
+                </form>
+            </div>
 
-    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Atacama">
-      <img src="assets/atacama.png" alt="Atacama">
-      <div class="masonry-overlay" aria-hidden="true"></div>
-      <div class="masonry-info"><p class="masonry-name">Atacama</p><p class="masonry-tag">Naturaleza • Chile</p></div>
-      <div class="card-overlay" aria-hidden="true">
-            <p class="card-overlay-text">Donde la tierra se vuelve Marte y las estrellas tocan el suelo. El silencio más antiguo del mundo.</p>
-      </div>
-    </div>
+            <!-- Columna 3: Mapa Interactivo Embebido (Quebrada de Humahuaca) -->
+            <div class="footer-column map-section">
+                <h3>Nuestra Ubicación</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1051.2575612087483!2d-65.29996631611341!3d-24.18550866512147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f433cd59b63%3A0xfb2e08060c8cc2b4!2sSecretaria%20de%20Turismo%20de%20Jujuy-%20Oficina%20de%20Informaci%C3%B3n%20Tur%C3%ADstica!5e0!3m2!1ses!2sar!4v1776037110346!5m2!1ses!2sar" 
+                        width="400" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
 
-  </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jujuy Turismo. Diseño fijo para escritorio.</p>
+        </div>
+    </footer>
 
-  <!-- Tabla de precios responsiva -->
-  <section class="price-table-section" aria-labelledby="price-table-title">
-    <div class="section-header">
-      <p class="section-label">Comparador</p>
-      <h2 class="section-title" id="price-table-title">Precios por <em>destino</em></h2>
-    </div>
-    <div class="table-wrapper" role="region" aria-label="Tabla de precios por destino" tabindex="0">
-      <table aria-label="Comparación de precios y destinos">
-        <thead>
-          <tr>
-            <th scope="col">Destino</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">Duración</th>
-            <th scope="col">Precio base</th>
-            <th scope="col">Todo incluido</th>
-            <th scope="col">Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="table-name">Patagonia Argentina</td>
-            <td>🌿 Naturaleza</td><td>8 días</td>
-            <td class="table-price">$1,200</td><td class="table-price">$1,890</td>
-            <td><span class="table-badge badge-pop">Popular</span></td>
-          </tr>
-          <tr>
-            <td class="table-name">Machu Picchu</td>
-            <td>🏛️ Cultural</td><td>6 días</td>
-            <td class="table-price">$980</td><td class="table-price">$1,450</td>
-            <td><span class="table-badge badge-new">Nuevo</span></td>
-          </tr>
-          <tr>
-            <td class="table-name">Cartagena</td>
-            <td>🏖️ Sol & Playa</td><td>7 días</td>
-            <td class="table-price">$750</td><td class="table-price">$1,200</td>
-            <td><span class="table-badge badge-pop">Popular</span></td>
-          </tr>
-          <tr>
-            <td class="table-name">Desierto de Atacama</td>
-            <td>🌿 Naturaleza</td><td>5 días</td>
-            <td class="table-price">$890</td><td class="table-price">$1,340</td>
-            <td><span class="table-badge badge-new">Nuevo</span></td>
-          </tr>
-          <tr>
-            <td class="table-name">Buenos Aires</td>
-            <td>🍽️ Gastronómico</td><td>5 días</td>
-            <td class="table-price">$620</td><td class="table-price">$980</td>
-            <td><span class="table-badge badge-pop">Popular</span></td>
-          </tr>
-          <tr>
-            <td class="table-name">Cusco Sagrado</td>
-            <td>⛪ Religioso</td><td>7 días</td>
-            <td class="table-price">$840</td><td class="table-price">$1,280</td>
-            <td><span class="table-badge badge-new">Nuevo</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-</main>
-
-<!-- ═══ FOOTER ════════════════════════════ -->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
-      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">📸</a>
-        <a href="#" class="social-link" aria-label="Facebook">👤</a>
-        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
-      </div>
-    </div>
-    <div>
-      <h3 class="footer-heading">Explorar</h3>
-      <ul class="footer-links">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="agencias.html">Agencias</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Información</h3>
-      <ul class="footer-links">
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Términos</a></li>
-        <li><a href="#">Accesibilidad</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Newsletter</h3>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="tu@email.com" required aria-label="Email para newsletter">
-        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
-      </form>
-      <div class="map-embed" role="img" aria-label="Ubicación"><span>📍 San Salvador de Jujuy</span></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 NorthTravel Turismo.</span>
-    <span>Hecho con ❤️ para exploradores</span>
-  </div>
-</footer>
-
-<script>
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
-
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
-  });
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
 </body>
 </html>

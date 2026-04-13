@@ -1,274 +1,433 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agencias — NorthTravel Turismo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/agencias.css">
+    <meta charset="UTF-8">
+    <title>Turismo Jujuy - Agencias y Excursiones</title>
+    <!-- Sin etiqueta viewport para mantener el diseño fijo de 1200px -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Navegación Principal">
+            <div class="logo-container">
+                <a href="index.html" class="logo" aria-label="Inicio - Jujuy Turismo">Jujuy Turismo</a>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" aria-label="Ir a la página de inicio">Inicio</a>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="destinos.html" aria-label="Ver destinos turísticos">Destinos</a>
+                    <!-- Contenedor del Mega-menú -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Cultural</h3>
+                            <ul>
+                                <li><a href="#">Pucará de Tilcara</a></li>
+                                <li><a href="#">Patrimonio Histórico</a></li>
+                                <li><a href="#">Museos Arqueológicos</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>De Naturaleza</h3>
+                            <ul>
+                                <li><a href="#">Parque Nacional Calilegua</a></li>
+                                <li><a href="#">Serranía del Hornocal</a></li>
+                                <li><a href="#">Reserva de la Biósfera</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Sol y Playa</h3>
+                            <ul>
+                                <li><a href="#">Dique La Ciénaga</a></li>
+                                <li><a href="#">Dique Las Maderas</a></li>
+                                <li><a href="#">Balnearios de Yala</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Gastronómico</h3>
+                            <ul>
+                                <li><a href="#">Ruta del Vino Jujeño</a></li>
+                                <li><a href="#">Platos Andinos</a></li>
+                                <li><a href="#">Mercados Tradicionales</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Religioso</h3>
+                            <ul>
+                                <li><a href="#">Peregrinación a Punta Corral</a></li>
+                                <li><a href="#">Catedral de San Salvador</a></li>
+                                <li><a href="#">Iglesias Coloniales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="agencias.html" aria-label="Ver agencias de turismo">Agencias</a>
+                    <!-- Contenedor del Mega-menú Agencias -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Excursiones Tradicionales</h3>
+                            <ul>
+                                <li><a href="#">Tour por la ciudad San Salvador</a></li>
+                                <li><a href="#">Full Dia en la Quebrada de Humahuaca</a></li>
+                                <li><a href="#">Visita a Salinas Grandes</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Turismo Comunitario</h3>
+                            <ul>
+                                <li><a href="#">Experiencia Artesanos Locales</a></li>
+                                <li><a href="#">Caravana de Llamas</a></li>
+                                <li><a href="#">Convivencia Rural</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Turismo de Aventura</h3>
+                            <ul>
+                                <li><a href="#">Trekking y Senderismo</a></li>
+                                <li><a href="#">Sandboard en El Huancar</a></li>
+                                <li><a href="#">Travesías en 4x4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-mega-menu">
+                    <a href="precios.html" aria-label="Ver precios y tarifas">Precios</a>
+                    <!-- Contenedor del Mega-menú Precios -->
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Paquetes Familiares</h3>
+                            <ul>
+                                <li><a href="#">Viajes de 7 Días</a></li>
+                                <li><a href="#">Vacaciones de Invierno</a></li>
+                                <li><a href="#">Valles todo incluido</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Mochileros / Low Cost</h3>
+                            <ul>
+                                <li><a href="#">Hostels y Refugios</a></li>
+                                <li><a href="#">Transporte Económico</a></li>
+                                <li><a href="#">Menú del Día</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Promociones</h3>
+                            <ul>
+                                <li><a href="#">Descuentos Temporada Baja</a></li>
+                                <li><a href="#">Residentes Argentinos</a></li>
+                                <li><a href="#">Promos 2x1 en Excursiones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" aria-label="Ir a la página de contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
-  <a href="index.html" class="nav-logo">
-    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
-  </a>
-  <div class="nav-links" role="menubar">
-    <div class="nav-item">
-      <a class="nav-link" href="destinos.html" aria-haspopup="true">Destinos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu">
-        <a class="mega-item" href="destinos.html"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
-        <a class="mega-item" href="destinos.html"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
-        <a class="mega-item" href="destinos.html"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
-        <a class="mega-item" href="destinos.html"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
-        <a class="mega-item" href="destinos.html"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
-        <a class="mega-item" href="destinos.html"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a class="nav-link active" href="agencias.html" aria-haspopup="true">Agencias
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu">
-        <a class="mega-item" href="agencias.html"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
-        <a class="mega-item" href="agencias.html"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
-        <a class="mega-item" href="contacto.html"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
-        <a class="mega-item" href="agencias.html"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
-      </div>
-    </div>
-    <a class="nav-link" href="index.html">Inicio</a>
-    <div class="nav-item" role="none">
-      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
-        Precios
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
-        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
-      </div>
-    </div>
-    <a class="nav-link" href="blog.html">Blog</a>
-  </div>
-  <div class="nav-actions">
-    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
-    <a href="contacto.html" class="btn btn-primary">Reservar</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</nav>
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="main-content">
 
-<!-- ═══ MAIN ══════════════════════════════ -->
-<main id="main-content">
+        <!-- Encabezado de la Página -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="section-container">
+                <h1 id="page-title" class="section-title">Nuestras Agencias y Excursiones</h1>
+                <p class="section-subtitle">Conocé las experiencias mejor valoradas y planificá tu viaje ideal por Jujuy.</p>
+            </div>
+        </section>
 
-  <div class="agencias-hero">
-    <p class="section-label">Nuestros socios</p>
-    <h1 class="section-title">Agencias de <em>confianza</em></h1>
-    <p class="section-sub">Pasa el cursor sobre cada tarjeta para ver los detalles completos</p>
-  </div>
+        <!-- ================= SECCIÓN 1: EXCURSIONES TRADICIONALES ================= -->
+        <section class="agency-category-section" aria-labelledby="cat-tradicionales">
+            <div class="section-container">
+                <h2 id="cat-tradicionales" class="section-title">Excursiones Tradicionales</h2>
+                
+                <!-- Contenedor de la Grilla. Usaremos CSS Grid (grid-template-columns: repeat(3, 1fr)) -->
+                <div class="agencies-grid">
+                    
+                    <!-- Tarjeta Flip 1 -->
+                    <!-- EXPLICACIÓN: .flip-card define la perspectiva 3D general -->
+                    <article class="flip-card">
+                        <!-- EXPLICACIÓN: .flip-card-inner es el contenedor que va a rotar 180 grados en Y con CSS -->
+                        <div class="flip-card-inner">
+                            
+                            <!-- Cara Frontal (Visible por defecto) -->
+                            <div class="flip-card-front">
+                                <img src="images/san_salvador.jpg" alt="Centro de San Salvador de Jujuy" class="card-img">
+                                <h3 class="card-title">Tour por la ciudad San Salvador</h3>
+                            </div>
+                            
+                            <!-- Cara Trasera (Oculta mediante backface-visibility: hidden) -->
+                            <div class="flip-card-back">
+                                <h3 class="back-title">City Tour Histórico</h3>
+                                <p class="back-desc">Recorré la Casa de Gobierno, la Catedral, el Cabildo y conocé la rica historia del Éxodo Jujeño junto a guías locales certificados.</p>
+                                
+                                <!-- Sistema de Rating. Ideal para animar la entrada de estrellas con nth-child() y @keyframes -->
+                                <div class="rating-system" aria-label="Calificación de 5 estrellas">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star half">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
 
-  <!-- Flip Cards Grid -->
-  <div class="flip-grid" role="list" aria-label="Agencias de turismo">
+                        </div>
+                    </article>
 
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="Cóndor Expediciones — hover para detalles">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <div class="agency-logo" style="background:#fff3ec" aria-hidden="true">🦅</div>
-          <h2 class="agency-name">Cóndor Expediciones</h2>
-          <p class="agency-type">Aventura &amp; Ecoturismo</p>
-          <div class="stars-wrap" aria-label="Valorar agencia">
-            <input type="radio" name="stars-1" id="s1-5" class="star-radio"><label for="s1-5" class="star-label" aria-label="5 estrellas">★</label>
-            <input type="radio" name="stars-1" id="s1-4" class="star-radio"><label for="s1-4" class="star-label" aria-label="4 estrellas">★</label>
-            <input type="radio" name="stars-1" id="s1-3" class="star-radio" checked><label for="s1-3" class="star-label" aria-label="3 estrellas">★</label>
-            <input type="radio" name="stars-1" id="s1-2" class="star-radio"><label for="s1-2" class="star-label" aria-label="2 estrellas">★</label>
-            <input type="radio" name="stars-1" id="s1-1" class="star-radio"><label for="s1-1" class="star-label" aria-label="1 estrella">★</label>
-          </div>
-          <p class="flip-hint">Pasa el cursor para ver detalles</p>
+                    <!-- Tarjeta Flip 2 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/quebrada.jpg" alt="Quebrada de Humahuaca" class="card-img">
+                                <h3 class="card-title">Full Dia en la Quebrada de Humahuaca</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">La Joya del Norte</h3>
+                                <p class="back-desc">Día completo visitando Purmamarca, Tilcara, Uquía y Humahuaca. Paisajes espectaculares, cultura andina y artesanías te esperan.</p>
+                                <div class="rating-system" aria-label="Calificación de 5 estrellas">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Flip 3 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/salinas_grandes.jpg" alt="Salinas Grandes de Jujuy" class="card-img">
+                                <h3 class="card-title">Visita a Salinas Grandes</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Espejo del Cielo</h3>
+                                <p class="back-desc">Ascendé por la imponente Cuesta de Lipán hasta llegar al inmenso desierto de sal. Una excursión imperdible para amantes de la fotografía.</p>
+                                <div class="rating-system" aria-label="Calificación de 4.5 estrellas">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star half">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN 2: TURISMO COMUNITARIO ================= -->
+        <section class="agency-category-section" aria-labelledby="cat-comunitario">
+            <div class="section-container">
+                <h2 id="cat-comunitario" class="section-title">Turismo Comunitario</h2>
+                
+                <div class="agencies-grid">
+                    
+                    <!-- Tarjeta Flip 1 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/artesanos.jpg" alt="Artesanos locales tejiendo" class="card-img">
+                                <h3 class="card-title">Experiencia Artesanos Locales</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Cultura Viva</h3>
+                                <p class="back-desc">Compartí una jornada en un taller familiar de cerámica y telares tradicionales en la Quebrada. Aprendé sus técnicas ancestrales.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Flip 2 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/llamas.jpg" alt="Caravana de llamas por los cerros" class="card-img">
+                                <h3 class="card-title">Caravana de Llamas</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Trekking Andino</h3>
+                                <p class="back-desc">Caminata suave de medio día acompañados por dóciles llamas de carga, emulando la antigua forma de transporte de los pueblos originarios.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Flip 3 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/rural.jpg" alt="Casa tradicional en la puna" class="card-img">
+                                <h3 class="card-title">Convivencia Rural</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Noche de Estrellas</h3>
+                                <p class="back-desc">Alojate en la casa de una familia de pastores en la Puna profunda. Disfrutá de comida casera, historias alrededor del fogón y el cielo más estrellado.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN 3: TURISMO DE AVENTURA ================= -->
+        <section class="agency-category-section" aria-labelledby="cat-aventura">
+            <div class="section-container">
+                <h2 id="cat-aventura" class="section-title">Turismo de Aventura</h2>
+                
+                <div class="agencies-grid">
+                    
+                    <!-- Tarjeta Flip 1 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/trekking.jpg" alt="Personas haciendo trekking en las montañas" class="card-img">
+                                <h3 class="card-title">Trekking y Senderismo</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Desafío en Altura</h3>
+                                <p class="back-desc">Rutas guiadas de alta exigencia por senderos ocultos de la precordillera. Ideal para aventureros con buen estado físico y sed de explorar.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star half">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Flip 2 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/sandboard.jpg" alt="Persona haciendo sandboard en la arena" class="card-img">
+                                <h3 class="card-title">Sandboard en El Huancar</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Adrenalina Pura</h3>
+                                <p class="back-desc">Deslizate por las inmensas dunas de arena en Abra Pampa. Incluye instrucción básica, tablas profesionales y traslados.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta Flip 3 -->
+                    <article class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/4x4.jpg" alt="Camioneta 4x4 en paisaje rocoso" class="card-img">
+                                <h3 class="card-title">Travesías en 4x4</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">Off-Road Extremo</h3>
+                                <p class="back-desc">Sumergite en caminos intransitables para vehículos comunes y llegá a rincones inhóspitos y mágicos del altiplano jujeño.</p>
+                                <div class="rating-system">
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                    <span class="star animate-star">★</span>
+                                </div>
+                                <a href="#" class="btn-primary">Consultar Agencia</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Columna 1: Enlaces y Redes Sociales -->
+            <div class="footer-column social-section">
+                <h3>Conectá con Nosotros</h3>
+                <ul class="social-links">
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Facebook">Facebook</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Instagram">Instagram</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro perfil de Twitter">Twitter</a></li>
+                    <li><a href="#" class="social-link" aria-label="Visitar nuestro canal de YouTube">YouTube</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Formulario de Newsletter -->
+            <div class="footer-column newsletter-section">
+                <h3>Suscribite a nuestro Newsletter</h3>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" aria-label="Ingresá tu correo electrónico" required>
+                    <button type="submit" class="btn-submit" aria-label="Botón para suscribirse al newsletter">Suscribirme</button>
+                </form>
+            </div>
+
+            <!-- Columna 3: Mapa Interactivo Embebido (Quebrada de Humahuaca) -->
+            <div class="footer-column map-section">
+                <h3>Nuestra Ubicación</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1051.2575612087483!2d-65.29996631611341!3d-24.18550866512147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f433cd59b63%3A0xfb2e08060c8cc2b4!2sSecretaria%20de%20Turismo%20de%20Jujuy-%20Oficina%20de%20Informaci%C3%B3n%20Tur%C3%ADstica!5e0!3m2!1ses!2sar!4v1776037110346!5m2!1ses!2sar" 
+                        width="400" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
-        <div class="flip-back">
-          <h3>Cóndor Expediciones</h3>
-          <p>Especialistas en trekking extremo y expediciones a la Patagonia desde 2008. Guías certificados UIAGM.</p>
-          <p class="agency-detail">📍 San Carlos de Bariloche</p>
-          <p class="agency-detail">📞 +54 294 442-0000</p>
-          <p class="agency-detail">⭐ 4.9/5 (320 reseñas)</p>
-          <p class="agency-detail">✅ Certified B Corp</p>
-          <a href="contacto.html" class="btn">Contactar →</a>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jujuy Turismo. Diseño fijo para escritorio.</p>
         </div>
-      </div>
-    </div>
+    </footer>
 
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="Inca Trail Tours">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <div class="agency-logo" style="background:#ecf5f3" aria-hidden="true">🏛️</div>
-          <h2 class="agency-name">Inca Trail Tours</h2>
-          <p class="agency-type">Cultural &amp; Arqueológico</p>
-          <div class="stars-wrap" aria-label="Valorar agencia">
-            <input type="radio" name="stars-2" id="s2-5" class="star-radio" checked><label for="s2-5" class="star-label" aria-label="5 estrellas">★</label>
-            <input type="radio" name="stars-2" id="s2-4" class="star-radio"><label for="s2-4" class="star-label" aria-label="4 estrellas">★</label>
-            <input type="radio" name="stars-2" id="s2-3" class="star-radio"><label for="s2-3" class="star-label" aria-label="3 estrellas">★</label>
-            <input type="radio" name="stars-2" id="s2-2" class="star-radio"><label for="s2-2" class="star-label" aria-label="2 estrellas">★</label>
-            <input type="radio" name="stars-2" id="s2-1" class="star-radio"><label for="s2-1" class="star-label" aria-label="1 estrella">★</label>
-          </div>
-          <p class="flip-hint">Pasa el cursor para ver detalles</p>
-        </div>
-        <div class="flip-back">
-          <h3>Inca Trail Tours</h3>
-          <p>Los mayores especialistas en cultura inca. Arqueólogos y etnohistoriadores como guías. Más de 15.000 viajeros.</p>
-          <p class="agency-detail">📍 Cusco, Perú</p>
-          <p class="agency-detail">📞 +51 84 23-0000</p>
-          <p class="agency-detail">⭐ 5.0/5 (580 reseñas)</p>
-          <p class="agency-detail">✅ Premio UNWTO 2024</p>
-          <a href="contacto.html" class="btn">Contactar →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="Caribe Azul">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <div class="agency-logo" style="background:#ecf0f8" aria-hidden="true">🌊</div>
-          <h2 class="agency-name">Caribe Azul</h2>
-          <p class="agency-type">Playa &amp; Lujo</p>
-          <div class="stars-wrap" aria-label="Valorar agencia">
-            <input type="radio" name="stars-3" id="s3-5" class="star-radio"><label for="s3-5" class="star-label" aria-label="5 estrellas">★</label>
-            <input type="radio" name="stars-3" id="s3-4" class="star-radio" checked><label for="s3-4" class="star-label" aria-label="4 estrellas">★</label>
-            <input type="radio" name="stars-3" id="s3-3" class="star-radio"><label for="s3-3" class="star-label" aria-label="3 estrellas">★</label>
-            <input type="radio" name="stars-3" id="s3-2" class="star-radio"><label for="s3-2" class="star-label" aria-label="2 estrellas">★</label>
-            <input type="radio" name="stars-3" id="s3-1" class="star-radio"><label for="s3-1" class="star-label" aria-label="1 estrella">★</label>
-          </div>
-          <p class="flip-hint">Pasa el cursor para ver detalles</p>
-        </div>
-        <div class="flip-back">
-          <h3>Caribe Azul</h3>
-          <p>Escapadas de lujo al Caribe. Resorts 5★, catamaranes privados y experiencias gastronómicas exclusivas.</p>
-          <p class="agency-detail">📍 Cartagena, Colombia</p>
-          <p class="agency-detail">📞 +57 5 664-0000</p>
-          <p class="agency-detail">⭐ 4.8/5 (210 reseñas)</p>
-          <p class="agency-detail">✅ Luxury Travel Guild</p>
-          <a href="contacto.html" class="btn">Contactar →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card" role="listitem" tabindex="0" aria-label="Sabores del Sur">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <div class="agency-logo" style="background:#f5f0e8" aria-hidden="true">🍽️</div>
-          <h2 class="agency-name">Sabores del Sur</h2>
-          <p class="agency-type">Turismo Gastronómico</p>
-          <div class="stars-wrap" aria-label="Valorar agencia">
-            <input type="radio" name="stars-4" id="s4-5" class="star-radio" checked><label for="s4-5" class="star-label" aria-label="5 estrellas">★</label>
-            <input type="radio" name="stars-4" id="s4-4" class="star-radio"><label for="s4-4" class="star-label" aria-label="4 estrellas">★</label>
-            <input type="radio" name="stars-4" id="s4-3" class="star-radio"><label for="s4-3" class="star-label" aria-label="3 estrellas">★</label>
-            <input type="radio" name="stars-4" id="s4-2" class="star-radio"><label for="s4-2" class="star-label" aria-label="2 estrellas">★</label>
-            <input type="radio" name="stars-4" id="s4-1" class="star-radio"><label for="s4-1" class="star-label" aria-label="1 estrella">★</label>
-          </div>
-          <p class="flip-hint">Pasa el cursor para ver detalles</p>
-        </div>
-        <div class="flip-back">
-          <h3>Sabores del Sur</h3>
-          <p>Tours culinarios únicos. Asados, bodegas en Mendoza, mercados de La Boca y clases con chefs Michelin.</p>
-          <p class="agency-detail">📍 Mendoza, Argentina</p>
-          <p class="agency-detail">📞 +54 261 420-0000</p>
-          <p class="agency-detail">⭐ 4.9/5 (445 reseñas)</p>
-          <p class="agency-detail">✅ Slow Food Partner</p>
-          <a href="contacto.html" class="btn">Contactar →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</main>
-
-<!-- ═══ FOOTER ════════════════════════════ -->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
-      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">📸</a>
-        <a href="#" class="social-link" aria-label="Facebook">👤</a>
-        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
-      </div>
-    </div>
-    <div>
-      <h3 class="footer-heading">Explorar</h3>
-      <ul class="footer-links">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="agencias.html">Agencias</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Información</h3>
-      <ul class="footer-links">
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Términos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Newsletter</h3>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="tu@email.com" required aria-label="Email">
-        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
-      </form>
-      <div class="map-embed" role="img" aria-label="Ubicación"><span>📍 San Salvador de Jujuy</span></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 NorthTravel Turismo.</span>
-    <span>Hecho con ❤️ para exploradores</span>
-  </div>
-</footer>
-
-<script>
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
-
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
-  });
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
 </body>
 </html>
