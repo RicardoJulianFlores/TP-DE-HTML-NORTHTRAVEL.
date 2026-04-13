@@ -67,12 +67,26 @@
   position: absolute; inset:0;
   background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
 }
+
+.card-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(15,10,5,0.8) 0%, transparent 60%);
+  opacity:0; transition:opacity var(--transition);
+}
+.masonry-card:hover .card-overlay { opacity:1 }
+.card-overlay-text {
+  position:absolute; bottom:16px; left:16px; right:16px;
+  color:#fff; font-size:0.8rem; line-height:1.4;
+  opacity:0; transform:translateY(8px); transition:all var(--transition);
+}
+.masonry-card:hover .card-overlay-text { opacity:1; transform:translateY(0) }
+
 .masonry-info {
   position: absolute; bottom:0; left:0; right:0;
   padding: 16px; color:#fff;
   transform: translateY(4px); transition:transform var(--transition);
 }
-.masonry-card:hover .masonry-info { transform:translateY(0) }
+.masonry-card:hover .masonry-info { transform:translateY(-24px) }
 .masonry-name { font-family:var(--font-display); font-weight:700; font-size:0.9rem }
 .masonry-tag  { font-size:0.65rem; opacity:0.8; text-transform:uppercase; letter-spacing:0.1em }
 
