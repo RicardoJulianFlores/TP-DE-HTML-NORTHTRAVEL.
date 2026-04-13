@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — NorthTravel Turismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- Modal de Confirmación -->
+<div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <span class="modal-icon" role="img" aria-label="Éxito">✈️</span>
+    <h2 class="modal-title" id="modalTitle">¡Mensaje Enviado!</h2>
+    <p class="modal-text">Gracias por contactarnos. Un agente especializado se comunicará contigo en menos de 24 horas.</p>
+    <button class="btn btn-primary" id="modalClose" aria-label="Cerrar modal">Perfecto, gracias</button>
+  </div>
+</div>
+
+<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo">
+    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
+  </a>
+  <div class="nav-links" role="menubar">
+    <div class="nav-item">
+      <a class="nav-link" href="destinos.html" aria-haspopup="true">Destinos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="destinos.html"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="agencias.html" aria-haspopup="true">Agencias
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="agencias.html"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
+        <a class="mega-item" href="agencias.html"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
+        <a class="mega-item" href="contacto.html"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
+        <a class="mega-item" href="agencias.html"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <div class="nav-item" role="none">
+      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
+        Precios
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="blog.html">Blog</a>
+  </div>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+    <a href="contacto.html" class="btn btn-primary">Reservar</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ MAIN ══════════════════════════════ -->
+<main id="main-content">
+
+  <div class="contact-hero">
+    <p class="section-label">Estamos aquí</p>
+    <h1 class="section-title">Hablemos de tu <em>viaje</em></h1>
+    <p class="section-sub">Nuestros especialistas diseñan la aventura perfecta para vos</p>
+  </div>
+
+  <div class="contact-wrapper">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h2>Planifica tu próxima aventura con nosotros</h2>
+        <p>Nuestros especialistas están disponibles para ayudarte a diseñar el viaje perfecto. Ya sea una escapada de fin de semana o una expedición de 30 días, tenemos la experiencia para hacerlo inolvidable.</p>
+        <div class="contact-detail">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <span>Jujuy 1234, San Salvador de Jujuy, Argentina</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <span>+54 388 422-0000</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon" aria-hidden="true">📧</span>
+          <span>hola@northtravel.com.ar</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon" aria-hidden="true">🕐</span>
+          <span>Lun–Vie: 9:00–18:00 | Sáb: 9:00–14:00</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="adv-form">
+        <form id="contactForm" novalidate aria-label="Formulario de contacto">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">Nombre *</label>
+              <input type="text" id="fname" class="form-input" placeholder="Tu nombre" required minlength="2" aria-required="true">
+              <span class="validation-msg" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Apellido *</label>
+              <input type="text" id="lname" class="form-input" placeholder="Tu apellido" required minlength="2" aria-required="true">
+              <span class="validation-msg" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required aria-required="true">
+            <span class="validation-msg" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Teléfono</label>
+            <input type="tel" id="phone" class="form-input" placeholder="+54 9 388 000-0000" pattern="[\+0-9\s\-]{7,20}" aria-describedby="phone-hint">
+            <span id="phone-hint" style="font-size:0.7rem;color:var(--clr-ink3)">Formato: +54 9 XXX XXX-XXXX</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dest">Destino de interés</label>
+            <select id="dest" class="form-input" aria-label="Seleccionar destino">
+              <option value="">Selecciona un destino…</option>
+              <option>Patagonia Argentina</option>
+              <option>Machu Picchu</option>
+              <option>Cartagena de Indias</option>
+              <option>Desierto de Atacama</option>
+              <option>Buenos Aires</option>
+              <option>Cusco Sagrado</option>
+              <option>Otro destino</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Mensaje *</label>
+            <textarea id="message" class="form-input" placeholder="Cuéntanos sobre tu viaje ideal, fechas, número de personas, presupuesto…" required minlength="20" rows="4" aria-required="true"></textarea>
+            <span class="validation-msg" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn" aria-label="Enviar formulario">
+            <div class="spinner" aria-hidden="true"></div>
+            <span class="btn-text">Enviar Consulta ✈️</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
+      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">👤</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Explorar</h3>
+      <ul class="footer-links">
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Información</h3>
+      <ul class="footer-links">
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Newsletter</h3>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="tu@email.com" required aria-label="Email">
+        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
+      </form>
+      <div class="map-embed" role="img" aria-label="Ubicación"><span>📍 San Salvador de Jujuy</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NorthTravel Turismo.</span>
+    <span>Hecho con ❤️ para exploradores</span>
+  </div>
+</footer>
+
+<script>
+  // Theme
+  const html = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  const logo = document.getElementById('logoimg');
+
+  function updateLogo(theme){
+    logo.style.opacity = 0;
+    setTimeout(() => {
+    logo.src = theme === 'dark'
+      ? logo.dataset.dark
+      : logo.dataset.light;
+      logo.style.opacity = 1;
+    },150);
+  }
+
+  if(saved) {
+    html.setAttribute('data-theme', saved);
+    updateLogo(saved);
+  }
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    updateLogo(t);
+  });
+  // Hamburger
+  document.getElementById('hamburgerBtn').addEventListener('click', function(){
+    const nl = document.querySelector('.nav-links');
+    const open = nl.classList.toggle('mobile-open');
+    this.setAttribute('aria-expanded', open);
+    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
+  });
+  // Modal
+  const modal = document.getElementById('successModal');
+  document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+  modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') modal.classList.remove('open'); });
+  // Contact form
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!this.checkValidity()){ this.reportValidity(); return; }
+    const btn = document.getElementById('submitBtn');
+    btn.classList.add('loading'); btn.querySelector('.btn-text').textContent = 'Enviando…'; btn.disabled = true;
+    setTimeout(() => {
+      btn.classList.remove('loading'); btn.querySelector('.btn-text').textContent = 'Enviar Consulta ✈️';
+      btn.disabled = false; this.reset();
+      modal.classList.add('open'); document.getElementById('modalClose').focus();
+    }, 2200);
+  });
+  // Newsletter
+  document.getElementById('newsletterForm').addEventListener('submit', function(e){
+    e.preventDefault(); const btn = this.querySelector('button');
+    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
+  });
+</script>
+</body>
+</html>

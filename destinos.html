@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos — NorthTravel Turismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/destinos.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo" aria-label="NorthTravel - Inicio">
+    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
+  </a>
+  <div class="nav-links" role="menubar">
+    <div class="nav-item" role="none">
+      <a class="nav-link active" href="destinos.html" role="menuitem" aria-haspopup="true">
+        Destinos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu" aria-label="Submenú Destinos">
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
+        <a class="mega-item" href="destinos.html" role="menuitem"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
+      </div>
+    </div>
+    <div class="nav-item" role="none">
+      <a class="nav-link" href="agencias.html" role="menuitem" aria-haspopup="true">
+        Agencias
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu">
+        <a class="mega-item" href="agencias.html" role="menuitem"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
+        <a class="mega-item" href="agencias.html" role="menuitem"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
+        <a class="mega-item" href="contacto.html" role="menuitem"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
+        <a class="mega-item" href="agencias.html" role="menuitem"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="index.html" role="menuitem">Inicio</a>
+    <div class="nav-item" role="none">
+      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
+        Precios
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="blog.html" role="menuitem">Blog</a>
+  </div>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+    <a href="contacto.html" class="btn btn-primary">Reservar</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ MAIN ══════════════════════════════ -->
+<main id="main-content">
+
+  <div class="dest-hero">
+    <p class="section-label">Catálogo completo</p>
+    <h1 class="section-title">Nuestros <em>destinos</em></h1>
+    <p class="section-sub">Filtra por categoría y encuentra tu próxima aventura perfecta</p>
+  </div>
+
+  <!-- Filter system (CSS-only) -->
+  <input type="radio" name="destfilter" id="f-all"      class="filter-radio" checked aria-hidden="true">
+  <input type="radio" name="destfilter" id="f-cultural" class="filter-radio" aria-hidden="true">
+  <input type="radio" name="destfilter" id="f-nature"   class="filter-radio" aria-hidden="true">
+  <input type="radio" name="destfilter" id="f-beach"    class="filter-radio" aria-hidden="true">
+  <input type="radio" name="destfilter" id="f-gastro"   class="filter-radio" aria-hidden="true">
+  <input type="radio" name="destfilter" id="f-religious" class="filter-radio" aria-hidden="true">
+
+  <div class="filter-tabs" role="tablist" aria-label="Filtrar destinos por categoría">
+    <label for="f-all"      class="filter-tab" role="tab" tabindex="0">🌐 Todos</label>
+    <label for="f-cultural" class="filter-tab" role="tab" tabindex="0">🏛️ Cultural</label>
+    <label for="f-nature"   class="filter-tab" role="tab" tabindex="0">🌿 Naturaleza</label>
+    <label for="f-beach"    class="filter-tab" role="tab" tabindex="0">🏖️ Sol y Playa</label>
+    <label for="f-gastro"   class="filter-tab" role="tab" tabindex="0">🍽️ Gastronómico</label>
+    <label for="f-religious" class="filter-tab" role="tab" tabindex="0">⛪ Religioso</label>
+  </div>
+
+  <!-- Masonry Gallery -->
+  <div class="masonry-grid" role="list" aria-label="Galería de destinos">
+
+    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Patagonia">
+      <img src="assets/patagonia.jpg" alt="patagonia">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Patagonia</p><p class="masonry-tag">Naturaleza • Chile & Argentina</p></div>
+    </div>
+
+    <div class="masonry-card medium dest-card-item" data-cat="cultural" role="listitem" tabindex="0" aria-label="Machu Picchu">
+      <img src="assets/machupichu.jpg" alt="Machu Picchu">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Machu Picchu</p><p class="masonry-tag">Cultural • Perú</p></div>
+    </div>
+
+    <div class="masonry-card short dest-card-item" data-cat="beach" role="listitem" tabindex="0" aria-label="Cancún">
+      <img src="assets/cancun.jpg" alt="Cancún">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Cancún</p><p class="masonry-tag">Sol y Playa • México</p></div>
+    </div>
+
+    <div class="masonry-card tall dest-card-item" data-cat="gastro" role="listitem" tabindex="0" aria-label="Buenos Aires">
+      <img src="assets/buenosaires.jpg" alt="Buenos Aires">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Buenos Aires</p><p class="masonry-tag">Gastronómico • Argentina</p></div>
+    </div>
+
+    <div class="masonry-card medium dest-card-item" data-cat="beach" role="listitem" tabindex="0" aria-label="Cartagena">
+      <img src="assets/cartagena.jpg" alt="Cartagena">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Cartagena</p><p class="masonry-tag">Sol y Playa • Colombia</p></div>
+    </div>
+
+    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Amazonia">
+      <img src="assets/amazonia.jpg" alt="Amazonia">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Amazonia</p><p class="masonry-tag">Naturaleza • Brasil</p></div>
+    </div>
+
+    <div class="masonry-card medium dest-card-item" data-cat="religious" role="listitem" tabindex="0" aria-label="Cusco Sagrado">
+      <img src="assets/cuscosagrado.webp" alt="Cusco Sagrado">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Cusco Sagrado</p><p class="masonry-tag">Religioso • Perú</p></div>
+    </div>
+
+    <div class="masonry-card short dest-card-item" data-cat="cultural" role="listitem" tabindex="0" aria-label="Quito Colonial">
+      <img src="assets/quito.jpg" alt="Quito Colonial">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Quito Colonial</p><p class="masonry-tag">Cultural • Ecuador</p></div>
+    </div>
+
+    <div class="masonry-card medium dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Atacama">
+      <img src="assets/atacama.png" alt="Atacama">
+      <div class="masonry-overlay" aria-hidden="true"></div>
+      <div class="masonry-info"><p class="masonry-name">Atacama</p><p class="masonry-tag">Naturaleza • Chile</p></div>
+    </div>
+
+  </div>
+
+  <!-- Tabla de precios responsiva -->
+  <section class="price-table-section" aria-labelledby="price-table-title">
+    <div class="section-header">
+      <p class="section-label">Comparador</p>
+      <h2 class="section-title" id="price-table-title">Precios por <em>destino</em></h2>
+    </div>
+    <div class="table-wrapper" role="region" aria-label="Tabla de precios por destino" tabindex="0">
+      <table aria-label="Comparación de precios y destinos">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Precio base</th>
+            <th scope="col">Todo incluido</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-name">Patagonia Argentina</td>
+            <td>🌿 Naturaleza</td><td>8 días</td>
+            <td class="table-price">$1,200</td><td class="table-price">$1,890</td>
+            <td><span class="table-badge badge-pop">Popular</span></td>
+          </tr>
+          <tr>
+            <td class="table-name">Machu Picchu</td>
+            <td>🏛️ Cultural</td><td>6 días</td>
+            <td class="table-price">$980</td><td class="table-price">$1,450</td>
+            <td><span class="table-badge badge-new">Nuevo</span></td>
+          </tr>
+          <tr>
+            <td class="table-name">Cartagena</td>
+            <td>🏖️ Sol & Playa</td><td>7 días</td>
+            <td class="table-price">$750</td><td class="table-price">$1,200</td>
+            <td><span class="table-badge badge-pop">Popular</span></td>
+          </tr>
+          <tr>
+            <td class="table-name">Desierto de Atacama</td>
+            <td>🌿 Naturaleza</td><td>5 días</td>
+            <td class="table-price">$890</td><td class="table-price">$1,340</td>
+            <td><span class="table-badge badge-new">Nuevo</span></td>
+          </tr>
+          <tr>
+            <td class="table-name">Buenos Aires</td>
+            <td>🍽️ Gastronómico</td><td>5 días</td>
+            <td class="table-price">$620</td><td class="table-price">$980</td>
+            <td><span class="table-badge badge-pop">Popular</span></td>
+          </tr>
+          <tr>
+            <td class="table-name">Cusco Sagrado</td>
+            <td>⛪ Religioso</td><td>7 días</td>
+            <td class="table-price">$840</td><td class="table-price">$1,280</td>
+            <td><span class="table-badge badge-new">Nuevo</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
+      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">👤</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Explorar</h3>
+      <ul class="footer-links">
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Información</h3>
+      <ul class="footer-links">
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Newsletter</h3>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="tu@email.com" required aria-label="Email para newsletter">
+        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
+      </form>
+      <div class="map-embed" role="img" aria-label="Ubicación"><span>📍 San Salvador de Jujuy</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NorthTravel Turismo.</span>
+    <span>Hecho con ❤️ para exploradores</span>
+  </div>
+</footer>
+
+<script>
+  const html = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  const logo = document.getElementById('logoimg');
+
+  function updateLogo(theme){
+    logo.style.opacity = 0;
+    setTimeout(() => {
+    logo.src = theme === 'dark'
+      ? logo.dataset.dark
+      : logo.dataset.light;
+      logo.style.opacity = 1;
+    },150);
+  }
+
+  if(saved) {
+    html.setAttribute('data-theme', saved);
+    updateLogo(saved);
+  }
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    updateLogo(t);
+  });
+  document.getElementById('hamburgerBtn').addEventListener('click', function(){
+    const nl = document.querySelector('.nav-links');
+    const open = nl.classList.toggle('mobile-open');
+    this.setAttribute('aria-expanded', open);
+    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
+  });
+  document.getElementById('newsletterForm').addEventListener('submit', function(e){
+    e.preventDefault(); const btn = this.querySelector('button');
+    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
+  });
+</script>
+</body>
+</html>

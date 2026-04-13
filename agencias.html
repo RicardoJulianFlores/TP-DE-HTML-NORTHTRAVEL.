@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencias — NorthTravel Turismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/agencias.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo">
+    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
+  </a>
+  <div class="nav-links" role="menubar">
+    <div class="nav-item">
+      <a class="nav-link" href="destinos.html" aria-haspopup="true">Destinos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="destinos.html"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="agencias.html" aria-haspopup="true">Agencias
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="agencias.html"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
+        <a class="mega-item" href="agencias.html"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
+        <a class="mega-item" href="contacto.html"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
+        <a class="mega-item" href="agencias.html"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <div class="nav-item" role="none">
+      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
+        Precios
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="blog.html">Blog</a>
+  </div>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+    <a href="contacto.html" class="btn btn-primary">Reservar</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ MAIN ══════════════════════════════ -->
+<main id="main-content">
+
+  <div class="agencias-hero">
+    <p class="section-label">Nuestros socios</p>
+    <h1 class="section-title">Agencias de <em>confianza</em></h1>
+    <p class="section-sub">Pasa el cursor sobre cada tarjeta para ver los detalles completos</p>
+  </div>
+
+  <!-- Flip Cards Grid -->
+  <div class="flip-grid" role="list" aria-label="Agencias de turismo">
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Cóndor Expediciones — hover para detalles">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="agency-logo" style="background:#fff3ec" aria-hidden="true">🦅</div>
+          <h2 class="agency-name">Cóndor Expediciones</h2>
+          <p class="agency-type">Aventura &amp; Ecoturismo</p>
+          <div class="stars-wrap" aria-label="Valorar agencia">
+            <input type="radio" name="stars-1" id="s1-5" class="star-radio"><label for="s1-5" class="star-label" aria-label="5 estrellas">★</label>
+            <input type="radio" name="stars-1" id="s1-4" class="star-radio"><label for="s1-4" class="star-label" aria-label="4 estrellas">★</label>
+            <input type="radio" name="stars-1" id="s1-3" class="star-radio" checked><label for="s1-3" class="star-label" aria-label="3 estrellas">★</label>
+            <input type="radio" name="stars-1" id="s1-2" class="star-radio"><label for="s1-2" class="star-label" aria-label="2 estrellas">★</label>
+            <input type="radio" name="stars-1" id="s1-1" class="star-radio"><label for="s1-1" class="star-label" aria-label="1 estrella">★</label>
+          </div>
+          <p class="flip-hint">Pasa el cursor para ver detalles</p>
+        </div>
+        <div class="flip-back">
+          <h3>Cóndor Expediciones</h3>
+          <p>Especialistas en trekking extremo y expediciones a la Patagonia desde 2008. Guías certificados UIAGM.</p>
+          <p class="agency-detail">📍 San Carlos de Bariloche</p>
+          <p class="agency-detail">📞 +54 294 442-0000</p>
+          <p class="agency-detail">⭐ 4.9/5 (320 reseñas)</p>
+          <p class="agency-detail">✅ Certified B Corp</p>
+          <a href="contacto.html" class="btn">Contactar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Inca Trail Tours">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="agency-logo" style="background:#ecf5f3" aria-hidden="true">🏛️</div>
+          <h2 class="agency-name">Inca Trail Tours</h2>
+          <p class="agency-type">Cultural &amp; Arqueológico</p>
+          <div class="stars-wrap" aria-label="Valorar agencia">
+            <input type="radio" name="stars-2" id="s2-5" class="star-radio" checked><label for="s2-5" class="star-label" aria-label="5 estrellas">★</label>
+            <input type="radio" name="stars-2" id="s2-4" class="star-radio"><label for="s2-4" class="star-label" aria-label="4 estrellas">★</label>
+            <input type="radio" name="stars-2" id="s2-3" class="star-radio"><label for="s2-3" class="star-label" aria-label="3 estrellas">★</label>
+            <input type="radio" name="stars-2" id="s2-2" class="star-radio"><label for="s2-2" class="star-label" aria-label="2 estrellas">★</label>
+            <input type="radio" name="stars-2" id="s2-1" class="star-radio"><label for="s2-1" class="star-label" aria-label="1 estrella">★</label>
+          </div>
+          <p class="flip-hint">Pasa el cursor para ver detalles</p>
+        </div>
+        <div class="flip-back">
+          <h3>Inca Trail Tours</h3>
+          <p>Los mayores especialistas en cultura inca. Arqueólogos y etnohistoriadores como guías. Más de 15.000 viajeros.</p>
+          <p class="agency-detail">📍 Cusco, Perú</p>
+          <p class="agency-detail">📞 +51 84 23-0000</p>
+          <p class="agency-detail">⭐ 5.0/5 (580 reseñas)</p>
+          <p class="agency-detail">✅ Premio UNWTO 2024</p>
+          <a href="contacto.html" class="btn">Contactar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Caribe Azul">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="agency-logo" style="background:#ecf0f8" aria-hidden="true">🌊</div>
+          <h2 class="agency-name">Caribe Azul</h2>
+          <p class="agency-type">Playa &amp; Lujo</p>
+          <div class="stars-wrap" aria-label="Valorar agencia">
+            <input type="radio" name="stars-3" id="s3-5" class="star-radio"><label for="s3-5" class="star-label" aria-label="5 estrellas">★</label>
+            <input type="radio" name="stars-3" id="s3-4" class="star-radio" checked><label for="s3-4" class="star-label" aria-label="4 estrellas">★</label>
+            <input type="radio" name="stars-3" id="s3-3" class="star-radio"><label for="s3-3" class="star-label" aria-label="3 estrellas">★</label>
+            <input type="radio" name="stars-3" id="s3-2" class="star-radio"><label for="s3-2" class="star-label" aria-label="2 estrellas">★</label>
+            <input type="radio" name="stars-3" id="s3-1" class="star-radio"><label for="s3-1" class="star-label" aria-label="1 estrella">★</label>
+          </div>
+          <p class="flip-hint">Pasa el cursor para ver detalles</p>
+        </div>
+        <div class="flip-back">
+          <h3>Caribe Azul</h3>
+          <p>Escapadas de lujo al Caribe. Resorts 5★, catamaranes privados y experiencias gastronómicas exclusivas.</p>
+          <p class="agency-detail">📍 Cartagena, Colombia</p>
+          <p class="agency-detail">📞 +57 5 664-0000</p>
+          <p class="agency-detail">⭐ 4.8/5 (210 reseñas)</p>
+          <p class="agency-detail">✅ Luxury Travel Guild</p>
+          <a href="contacto.html" class="btn">Contactar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" role="listitem" tabindex="0" aria-label="Sabores del Sur">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="agency-logo" style="background:#f5f0e8" aria-hidden="true">🍽️</div>
+          <h2 class="agency-name">Sabores del Sur</h2>
+          <p class="agency-type">Turismo Gastronómico</p>
+          <div class="stars-wrap" aria-label="Valorar agencia">
+            <input type="radio" name="stars-4" id="s4-5" class="star-radio" checked><label for="s4-5" class="star-label" aria-label="5 estrellas">★</label>
+            <input type="radio" name="stars-4" id="s4-4" class="star-radio"><label for="s4-4" class="star-label" aria-label="4 estrellas">★</label>
+            <input type="radio" name="stars-4" id="s4-3" class="star-radio"><label for="s4-3" class="star-label" aria-label="3 estrellas">★</label>
+            <input type="radio" name="stars-4" id="s4-2" class="star-radio"><label for="s4-2" class="star-label" aria-label="2 estrellas">★</label>
+            <input type="radio" name="stars-4" id="s4-1" class="star-radio"><label for="s4-1" class="star-label" aria-label="1 estrella">★</label>
+          </div>
+          <p class="flip-hint">Pasa el cursor para ver detalles</p>
+        </div>
+        <div class="flip-back">
+          <h3>Sabores del Sur</h3>
+          <p>Tours culinarios únicos. Asados, bodegas en Mendoza, mercados de La Boca y clases con chefs Michelin.</p>
+          <p class="agency-detail">📍 Mendoza, Argentina</p>
+          <p class="agency-detail">📞 +54 261 420-0000</p>
+          <p class="agency-detail">⭐ 4.9/5 (445 reseñas)</p>
+          <p class="agency-detail">✅ Slow Food Partner</p>
+          <a href="contacto.html" class="btn">Contactar →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
+      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">👤</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Explorar</h3>
+      <ul class="footer-links">
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Información</h3>
+      <ul class="footer-links">
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Newsletter</h3>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="tu@email.com" required aria-label="Email">
+        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
+      </form>
+      <div class="map-embed" role="img" aria-label="Ubicación"><span>📍 San Salvador de Jujuy</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NorthTravel Turismo.</span>
+    <span>Hecho con ❤️ para exploradores</span>
+  </div>
+</footer>
+
+<script>
+  const html = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  const logo = document.getElementById('logoimg');
+
+  function updateLogo(theme){
+    logo.style.opacity = 0;
+    setTimeout(() => {
+    logo.src = theme === 'dark'
+      ? logo.dataset.dark
+      : logo.dataset.light;
+      logo.style.opacity = 1;
+    },150);
+  }
+
+  if(saved) {
+    html.setAttribute('data-theme', saved);
+    updateLogo(saved);
+  }
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    updateLogo(t);
+  });
+  document.getElementById('hamburgerBtn').addEventListener('click', function(){
+    const nl = document.querySelector('.nav-links');
+    const open = nl.classList.toggle('mobile-open');
+    this.setAttribute('aria-expanded', open);
+    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
+  });
+  document.getElementById('newsletterForm').addEventListener('submit', function(e){
+    e.preventDefault(); const btn = this.querySelector('button');
+    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
+  });
+</script>
+</body>
+</html>
