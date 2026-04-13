@@ -299,17 +299,7 @@
     localStorage.setItem('theme', t);
     updateLogo(t);
   });
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
-  });
-  // Scroll reveal for blog articles
-  const ro = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='none'; ro.unobserve(e.target); }});
-  }, {threshold:0.1});
-  document.querySelectorAll('.article-card').forEach(el => ro.observe(el));
+  // Newsletter form
   document.getElementById('newsletterForm').addEventListener('submit', function(e){
     e.preventDefault(); const btn = this.querySelector('button');
     btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);

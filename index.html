@@ -364,40 +364,6 @@
     updateLogo(t);
   });
 
-  // Mobile menu
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open
-      ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999'
-      : '';
-  });
-
-  // Scroll reveal
-  const ro = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
-  }, {threshold:0.1, rootMargin:'0px 0px -60px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-  // Animated counter
-  const co = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if(!e.isIntersecting) return;
-      e.target.querySelectorAll('.counter-number').forEach(el => {
-        const target = +el.dataset.target, suffix = el.dataset.suffix||'';
-        let v = 0; const step = target/60;
-        const t = setInterval(() => {
-          v = Math.min(v+step, target);
-          el.textContent = Math.floor(v)+suffix;
-          if(v >= target) clearInterval(t);
-        }, 16);
-      });
-      co.unobserve(e.target);
-    });
-  }, {threshold:0.5});
-  const cs = document.querySelector('.counter-section');
-  if(cs) co.observe(cs);
 
   // Newsletter
   document.getElementById('newsletterForm').addEventListener('submit', function(e){

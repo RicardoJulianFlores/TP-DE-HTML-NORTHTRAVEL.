@@ -248,13 +248,6 @@
     localStorage.setItem('theme', t);
     updateLogo(t);
   });
-  // Hamburger
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
-  });
   // Modal
   const modal = document.getElementById('successModal');
   document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
