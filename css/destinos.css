@@ -86,7 +86,7 @@
   padding: 16px; color:#fff;
   transform: translateY(4px); transition:transform var(--transition);
 }
-.masonry-card:hover .masonry-info { transform:translateY(-24px) }
+.masonry-card:hover .masonry-info { transform:translateY(-90%) }
 .masonry-name { font-family:var(--font-display); font-weight:700; font-size:0.9rem }
 .masonry-tag  { font-size:0.65rem; opacity:0.8; text-transform:uppercase; letter-spacing:0.1em }
 
