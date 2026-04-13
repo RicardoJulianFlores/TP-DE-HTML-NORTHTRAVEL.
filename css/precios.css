@@ -75,7 +75,7 @@
 .tooltip-text {
   position: absolute; left:50%; bottom:calc(100% + 8px);
   transform: translateX(-50%) translateY(-8px);
-  background: var(--clr-ink); color:#fff;
+  background: var(--clr-ink); color:var(--clr-bg);
   padding: 8px 12px; border-radius:var(--radius);
   font-size: 0.7rem; white-space:nowrap;
   opacity:0; pointer-events:none;
