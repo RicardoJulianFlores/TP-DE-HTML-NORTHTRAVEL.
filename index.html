@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<!-- Enlace invisible diseñado para lectores de pantalla. Permite saltar el menú e ir directo al contenido -->
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <!-- ═══ NAVEGACIÓN ═══════════════════════ -->
@@ -21,10 +22,12 @@
 
   <div class="nav-links" role="menubar">
     <div class="nav-item" role="none">
+      <!-- aria-haspopup="true" le indica a los lectores de pantalla que este enlace abre un submenú -->
       <a class="nav-link" href="destinos.html" role="menuitem" aria-haspopup="true">
         Destinos
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
+      <!-- El "mega-menu" es un submenú ancho que revela múltiples opciones a la vez usando CSS hover -->
       <div class="mega-menu" role="menu" aria-label="Submenú Destinos">
         <a class="mega-item" href="destinos.html" role="menuitem"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
         <a class="mega-item" href="destinos.html" role="menuitem"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
@@ -66,6 +69,7 @@
   <div class="nav-actions">
     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro"></button>
     <a href="contacto.html" class="btn btn-primary" aria-label="Reservar viaje">Reservar</a>
+    <!-- Botón hamburguesa, visible solo en pantallas pequeñas (mediante CSS) para abrir el menú -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -78,6 +82,9 @@
   <!-- HERO -->
   <section class="hero" aria-label="Bienvenida">
     <div class="hero-overlay" aria-hidden="true"></div>
+    <!-- Atributos del video:
+         autoplay: Inicia solo. muted: Sin sonido (requerido para autoplay en navegadores). 
+         loop: Se repite infinitamente. playsinline: Evita que se abra en pantalla completa en iOS. -->
     <video autoplay muted loop playsinline class="hero-video">
       <source src="assets/video.mp4" type="video/mp4">
       Tu navegador no soporta video.
@@ -98,6 +105,7 @@
   </section>
 
   <!-- DESTINOS DESTACADOS -->
+  <!-- La clase "reveal" inicia el elemento oculto. El JavaScript luego agregará la clase "visible" cuando el usuario haga scroll hasta aquí -->
   <section class="section reveal" aria-labelledby="featured-title">
     <div class="section-header">
       <p class="section-label">Selección editorial</p>
@@ -106,6 +114,7 @@
     </div>
     <div class="cards-grid" role="list">
 
+      <!-- reveal-delay-1 retrasa la aparición de esta tarjeta un poco, para crear un efecto de aparición en cascada -->
       <article class="card reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Destino: Patagonia Argentina">
         <div class="card-img">
           <img src="assets/patagonia.jpg" alt="Patagonia">
@@ -205,6 +214,7 @@
   <section class="counter-section" aria-label="Estadísticas">
     <div class="counter-grid" role="list">
       <div class="counter-item" role="listitem">
+        <!-- data-target guarda el número final al que debe llegar la animación, y data-suffix guarda el texto que va después (ej: "+") -->
         <span class="counter-number" data-target="500" data-suffix="+">500+</span>
         <span class="counter-label">Destinos Únicos</span>
       </div>
@@ -340,15 +350,17 @@
 <script>
   // Dark mode
   const html = document.documentElement;
+  // Lee del almacenamiento del navegador si el usuario ya había elegido un tema antes
   const saved = localStorage.getItem('theme');
   const logo = document.getElementById('logoimg');
 
+  // Función para cambiar la imagen del logo suavemente (con una transición de opacidad)
   function updateLogo(theme){
     logo.style.opacity = 0;
     setTimeout(() => {
     logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
+      ? logo.dataset.dark  // Usa la ruta guardada en el atributo data-dark del HTML
+      : logo.dataset.light; // Usa la ruta guardada en data-light
       logo.style.opacity = 1;
     },150);
   }
@@ -363,7 +375,19 @@
     localStorage.setItem('theme', t);
     updateLogo(t);
   });
-  
+
+  // Mobile menu
+  document.getElementById('hamburgerBtn').addEventListener('click', function(){
+    const nl = document.querySelector('.nav-links');
+    // Alterna (pone o quita) la clase mobile-open
+    const open = nl.classList.toggle('mobile-open');
+    this.setAttribute('aria-expanded', open);
+    // Si está abierto, inyecta estilos directamente para forzar que los enlaces se muestren como una lista vertical
+    nl.style.cssText = open
+      ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999'
+      : '';
+  });
+
   // Scroll reveal
   const ro = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
