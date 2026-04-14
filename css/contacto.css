@@ -43,10 +43,12 @@
   transition: all var(--transition);
 }
 .form-input:focus   { outline:none; border-color:var(--clr-accent); background:var(--clr-surface) }
+/* [TRUCO CSS VALIDACIÓN] Si el input es válido y el usuario ya escribió algo (not:placeholder-shown), lo pintamos de verde */
 .form-input:valid:not(:placeholder-shown)   { border-color:var(--clr-accent2) }
+/* Si el input es inválido (ej: puso mal el email) y ya empezó a escribir, lo pintamos de rojo */
 .form-input:invalid:not(:placeholder-shown) { border-color:#e53e3e }
 
-/* Validation icons via ::before on sibling span */
+/* Iconos de validación (El tilde verde ✓ o la cruz roja ✗) usando CSS */
 .validation-msg {
   position: absolute; right:12px; top:42px;
   font-size: 0.7rem; font-weight:600; opacity:0;

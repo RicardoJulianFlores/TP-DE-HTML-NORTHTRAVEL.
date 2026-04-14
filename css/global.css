@@ -6,6 +6,8 @@
 /* Google Fonts se carga en cada HTML */
 
 /* ─── CUSTOM PROPERTIES ─────────────────── */
+/* [EXPLICACIÓN] Las variables en :root nos permiten guardar colores, tamaños y fuentes. 
+   esto hace que el código sea muy fácil de mantener porque si queremos cambiar el color naranja por verde, solo lo cambiamos aquí y se actualiza en todas las páginas. */
 :root {
   --clr-bg:        #faf8f4;
   --clr-surface:   #ffffff;
@@ -30,6 +32,7 @@
   --nav-h:         72px;
 }
 
+/* [EXPLICACIÓN] Variables alternativas que se activan si la etiqueta <html> tiene el atributo data-theme="dark" */
 [data-theme="dark"] {
   --clr-bg:        #0f0d0a;
   --clr-surface:   #1c1914;
@@ -160,7 +163,8 @@ input, textarea, select { font-family:var(--font-body) }
 .nav-link svg { width:14px; height:14px; transition:transform var(--transition) }
 .nav-item:hover .nav-link svg { transform:rotate(180deg) }
 
-/* Mega Menu */
+/* Mega Menu (Submenú) */
+/* [TRUCO CSS] Inicia con opacity:0 y visibility:hidden (completamente invisible e intocable). */
 .mega-menu {
   position: absolute; top:calc(100% + 12px); left:50%;
   transform: translateX(-50%) translateY(-8px);
@@ -174,6 +178,7 @@ input, textarea, select { font-family:var(--font-body) }
   opacity:0; visibility:hidden; pointer-events:none;
   transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
 }
+/* [TRUCO CSS] Cuando el mouse pasa por encima del botón principal (.nav-item:hover), lo hacemos visible y le damos opacidad 1. */
 .nav-item:hover .mega-menu,
 .nav-item:focus-within .mega-menu {
   opacity:1; visibility:visible; pointer-events:all;

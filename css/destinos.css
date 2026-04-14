@@ -9,6 +9,8 @@
 }
 
 /* ─── CSS-ONLY FILTER SYSTEM ─────────────── */
+/* [TRUCO MAGISTRAL] Este es el sistema de filtros sin Javascript. Funciona usando inputs ocultos. */
+/* 1. Ocultamos los botones redondos clásicos (radio buttons) */
 .filter-radio { display:none }
 
 .filter-tabs {
@@ -25,7 +27,8 @@
 }
 .filter-tab:hover { border-color:var(--clr-accent); color:var(--clr-accent) }
 
-/* Active filter tab */
+/* 2. Cuando uno de los inputs de arriba está chequeado (:checked), pintamos de color naranja 
+   la etiqueta <label> (que es nuestro botón visual) usando el selector "~" (hermano general). */
 #f-all:checked      ~ .filter-tabs label[for="f-all"],
 #f-cultural:checked ~ .filter-tabs label[for="f-cultural"],
 #f-nature:checked   ~ .filter-tabs label[for="f-nature"],
@@ -35,7 +38,7 @@
   background: var(--clr-accent); color:#fff; border-color:var(--clr-accent);
 }
 
-/* ─── MASONRY GRID ───────────────────────── */
+/* ─── MASONRY GRID (Grilla de Destinos) ──── */
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -90,7 +93,9 @@
 .masonry-name { font-family:var(--font-display); font-weight:700; font-size:0.9rem }
 .masonry-tag  { font-size:0.65rem; opacity:0.8; text-transform:uppercase; letter-spacing:0.1em }
 
-/* Filter card visibility */
+/* 3. ¡LA MAGIA DE LOS FILTROS! 
+   Si el radio button "f-cultural" está chequeado, le decimos al CSS que agarre todas las tarjetas 
+   que NO tengan [data-cat="cultural"] y les ponga display: none (las esconda). */
 .dest-card-item { transition:opacity 0.4s ease }
 
 #f-all:checked      ~ .masonry-grid .dest-card-item                          { display:block }

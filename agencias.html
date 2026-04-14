@@ -76,12 +76,15 @@
   <!-- Flip Cards Grid -->
   <div class="flip-grid" role="list" aria-label="Agencias de turismo">
 
+    <!-- [EFECTO 3D] La estructura es: Un contenedor principal (.flip-card) que da la perspectiva, y un contenedor interno (.flip-inner) que es el que realmente rota 180 grados con CSS. -->
     <div class="flip-card" role="listitem" tabindex="0" aria-label="Cóndor Expediciones — hover para detalles">
       <div class="flip-inner">
         <div class="flip-front">
           <div class="agency-logo" style="background:#fff3ec" aria-hidden="true">🦅</div>
           <h2 class="agency-name">Cóndor Expediciones</h2>
           <p class="agency-type">Aventura &amp; Ecoturismo</p>
+          <!-- [SISTEMA DE ESTRELLAS CSS] Usamos inputs ocultos. El flex-direction: row-reverse en CSS 
+               hace que al iluminar una estrella, se iluminen todas las que están a su izquierda gracias al selector ~. -->
           <div class="stars-wrap" aria-label="Valorar agencia">
             <input type="radio" name="stars-1" id="s1-5" class="star-radio"><label for="s1-5" class="star-label" aria-label="5 estrellas">★</label>
             <input type="radio" name="stars-1" id="s1-4" class="star-radio"><label for="s1-4" class="star-label" aria-label="4 estrellas">★</label>

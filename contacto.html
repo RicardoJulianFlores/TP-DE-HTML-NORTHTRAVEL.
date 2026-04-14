@@ -110,10 +110,13 @@
 
       <!-- Form -->
       <div class="adv-form">
+        <!-- [EXPLICACIÓN] "novalidate" apaga los mensajes de error por defecto feos del navegador, 
+             porque nosotros creamos nuestros propios mensajes de error visuales usando CSS. -->
         <form id="contactForm" novalidate aria-label="Formulario de contacto">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="fname">Nombre *</label>
+              <!-- [VALIDACIÓN CSS] Al poner 'required' y 'minlength="2"', le damos al CSS las reglas para saber cuándo colorear el borde de verde (:valid) o de rojo (:invalid). -->
               <input type="text" id="fname" class="form-input" placeholder="Tu nombre" required minlength="2" aria-required="true">
               <span class="validation-msg" aria-live="polite"></span>
             </div>
@@ -125,11 +128,13 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="email">Email *</label>
+            <!-- [VALIDACIÓN CSS] type="email" asegura que el usuario escriba un formato que contenga un '@' y un dominio. -->
             <input type="email" id="email" class="form-input" placeholder="tu@email.com" required aria-required="true">
             <span class="validation-msg" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label class="form-label" for="phone">Teléfono</label>
+            <!-- [EXPLICACIÓN] El atributo 'pattern' usa expresiones regulares (Regex) para aceptar solo números, espacios, el signo más o guiones. -->
             <input type="tel" id="phone" class="form-input" placeholder="+54 9 388 000-0000" pattern="[\+0-9\s\-]{7,20}" aria-describedby="phone-hint">
             <span id="phone-hint" style="font-size:0.7rem;color:var(--clr-ink3)">Formato: +54 9 XXX XXX-XXXX</span>
           </div>

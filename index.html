@@ -10,10 +10,11 @@
 </head>
 <body>
 
-<!-- Enlace invisible diseñado para lectores de pantalla. Permite saltar el menú e ir directo al contenido -->
+<!-- [ACCESIBILIDAD] Enlace invisible diseñado para lectores de pantalla. Permite a personas ciegas saltar el menú e ir directo al contenido -->
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <!-- ═══ NAVEGACIÓN ═══════════════════════ -->
+<!-- [SEMÁNTICA] Usamos la etiqueta <nav> (navigation) en lugar de un div para que el navegador sepa que esto es un menú -->
 <nav class="nav" role="navigation" aria-label="Navegación principal">
   <a href="index.html" class="nav-logo" aria-label="NorthTravel - Inicio">
     <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
@@ -21,7 +22,7 @@
 
   <div class="nav-links" role="menubar">
     <div class="nav-item" role="none">
-      <!-- aria-haspopup="true" le indica a los lectores de pantalla que este enlace abre un submenú -->
+      <!-- [ACCESIBILIDAD] aria-haspopup="true" le avisa a los lectores de pantalla que este enlace despliega un submenú oculto -->
       <a class="nav-link" href="destinos.html" role="menuitem" aria-haspopup="true">
         Destinos
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -73,12 +74,14 @@
 </nav>
 
 <!-- ═══ MAIN CONTENT ═════════════════════ -->
+<!-- [SEMÁNTICA] La etiqueta <main> indica cuál es el contenido principal y único de esta página específica -->
 <main id="main-content" style="padding-top:0">
 
   <!-- HERO -->
+  <!-- [SEMÁNTICA] <section> agrupa contenido relacionado a un mismo tema. -->
   <section class="hero" aria-label="Bienvenida">
     <div class="hero-overlay" aria-hidden="true"></div>
-    <!-- Atributos del video:
+    <!-- [EXPLICACIÓN] Atributos del video:
          autoplay: Inicia solo. muted: Sin sonido (requerido para autoplay en navegadores). 
          loop: Se repite infinitamente. playsinline: Evita que se abra en pantalla completa en iOS. -->
     <video autoplay muted loop playsinline class="hero-video">
@@ -101,8 +104,7 @@
   </section>
 
   <!-- DESTINOS DESTACADOS -->
-  <!-- La clase "reveal" inicia el elemento oculto. El JavaScript luego agregará la clase "visible" cuando el usuario haga scroll hasta aquí -->
-  <section class="section reveal" aria-labelledby="featured-title">
+  <section id="section-reveal" class="section" aria-labelledby="featured-title">
     <div class="section-header">
       <p class="section-label">Selección editorial</p>
       <h2 class="section-title" id="featured-title">Destinos que te <em>robarán</em> el aliento</h2>
@@ -110,8 +112,8 @@
     </div>
     <div class="cards-grid" role="list">
 
-      <!-- reveal-delay-1 retrasa la aparición de esta tarjeta un poco, para crear un efecto de aparición en cascada -->
-      <article class="card reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Destino: Patagonia Argentina">
+      <!-- [SEMÁNTICA] <article> se usa para contenido que podría tener sentido por sí solo de forma independiente, como un post, o en este caso, una tarjeta de un destino -->
+      <article class="card" role="listitem" tabindex="0" aria-label="Destino: Patagonia Argentina">
         <div class="card-img">
           <img src="assets/patagonia.jpg" alt="Patagonia">
           <div class="card-overlay" aria-hidden="true">
@@ -131,7 +133,7 @@
 
       
 
-      <article class="card reveal reveal-delay-3" role="listitem" tabindex="0" aria-label="Destino: Cartagena">
+      <article class="card" role="listitem" tabindex="0" aria-label="Destino: Cartagena">
         <div class="card-img">
           <img src="assets/cartagena.jpg" alt="Cartagena">
           <div class="card-overlay" aria-hidden="true">
@@ -149,7 +151,7 @@
         </div>
       </article>
 
-      <article class="card reveal" role="listitem" tabindex="0" aria-label="Destino: Buenos Aires">
+      <article class="card" role="listitem" tabindex="0" aria-label="Destino: Buenos Aires">
         <div class="card-img">
           <img src="assets/buenosaires.jpg" alt="Buenos Aires">
           <div class="card-overlay" aria-hidden="true">
@@ -167,7 +169,7 @@
         </div>
       </article>
 
-      <article class="card reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Destino: Atacama">
+      <article class="card" role="listitem" tabindex="0" aria-label="Destino: Atacama">
         <div class="card-img">
           <img src="assets/atacama.png" alt="Atacama">
           <div class="card-overlay" aria-hidden="true">
@@ -185,7 +187,7 @@
         </div>
       </article>
 
-      <article class="card reveal reveal-delay-2" role="listitem" tabindex="0" aria-label="Destino: Cusco">
+      <article class="card" role="listitem" tabindex="0" aria-label="Destino: Cusco">
         <div class="card-img">
           <img src="assets/cuscosagrado.webp" alt="Cusco Sagrado">
           <div class="card-overlay" aria-hidden="true">
@@ -280,6 +282,7 @@
 </main>
 
 <!-- ═══ FOOTER ════════════════════════════ -->
+<!-- [SEMÁNTICA] <footer> engloba el pie de página, donde van enlaces legales, redes sociales y copyright -->
 <footer role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">

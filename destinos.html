@@ -75,7 +75,7 @@
     <p class="section-sub">Filtra por categoría y encuentra tu próxima aventura perfecta</p>
   </div>
 
-  <!-- Filter system (CSS-only) -->
+  <!-- [TRUCO FILTROS] Estos inputs están ocultos con CSS. Cuando el usuario hace clic en las "Pestañas" de abajo, en realidad está activando estos inputs. -->
   <input type="radio" name="destfilter" id="f-all"      class="filter-radio" checked aria-hidden="true">
   <input type="radio" name="destfilter" id="f-cultural" class="filter-radio" aria-hidden="true">
   <input type="radio" name="destfilter" id="f-nature"   class="filter-radio" aria-hidden="true">
@@ -84,6 +84,8 @@
   <input type="radio" name="destfilter" id="f-religious" class="filter-radio" aria-hidden="true">
 
   <div class="filter-tabs" role="tablist" aria-label="Filtrar destinos por categoría">
+    <!-- [EXPLICACIÓN] La etiqueta <label> con el atributo 'for="f-cultural"' está vinculada al input de arriba. 
+         Hacer clic aquí equivale a marcar el input radio. -->
     <label for="f-all"      class="filter-tab" role="tab" tabindex="0">🌐 Todos</label>
     <label for="f-cultural" class="filter-tab" role="tab" tabindex="0">🏛️ Cultural</label>
     <label for="f-nature"   class="filter-tab" role="tab" tabindex="0">🌿 Naturaleza</label>
@@ -95,6 +97,8 @@
   <!-- Masonry Gallery -->
   <div class="masonry-grid" role="list" aria-label="Galería de destinos">
 
+    <!-- [TRUCO FILTROS] El atributo data-cat="nature" es clave. El CSS lo lee para saber de qué categoría 
+         es esta tarjeta y decidir si la oculta o la muestra al cambiar los filtros. -->
     <div class="masonry-card tall dest-card-item" data-cat="nature" role="listitem" tabindex="0" aria-label="Patagonia">
       <img src="assets/patagonia.jpg" alt="patagonia">
       <div class="masonry-overlay" aria-hidden="true"></div>

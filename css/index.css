@@ -8,6 +8,7 @@
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
   margin-top: calc(-1 * var(--nav-h)); /* full-height behind nav */
+  /* [EXPLICACIÓN] Este margin-top negativo hace que la imagen del Hero suba y se coloque por detrás del menú de navegación transparente. */
 }
 
 .hero-video {
@@ -40,6 +41,7 @@
 .hero-eyebrow {
   font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
   color: var(--clr-gold); margin-bottom:20px;
+  /* [ANIMACIÓN] Llamamos a la animación "slideUp" que dura 0.8s, y el "0.2s" es el retraso (delay) para que aparezca después. "both" asegura que mantenga el estado final. */
   animation: slideUp 0.8s 0.2s both;
 }
 .hero-title {
@@ -62,6 +64,7 @@
   display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
   animation: slideUp 0.8s 0.8s both;
 }
+/* [TRUCO ANIMACIÓN] Esta es la regla clave que hace que los textos vengan desde abajo (translateY) y aparezcan suavemente (opacity). */
 @keyframes slideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
 
 .hero-scroll {
@@ -146,6 +149,7 @@
 /* ─── COUNTER SECTION ────────────────────── */
 .counter-section {
   background: var(--clr-accent);
+  /* [TRUCO FORMAS] 'clip-path' nos permite cortar el contenedor para que no sea un rectángulo aburrido. En este caso, corta los bordes superior e inferior en diagonal. */
   clip-path: polygon(0 5%,100% 0,100% 95%,0 100%);
   padding: 100px clamp(16px,4vw,48px) 120px;
 }
@@ -186,8 +190,10 @@
 }
 .carousel-track {
   display:flex;
+  /* [ANIMACIÓN CARRUSEL] Hace que toda la fila de testimonios se mueva infinitamente siguiendo los pasos de @keyframes slideAnimation */
   animation: slideAnimation 12s infinite;
 }
+/* [EXPLICACIÓN] Movemos el contenedor hacia la izquierda en porcentajes de 100% para mostrar la siguiente tarjeta. Los tiempos repetidos (ej: 0% y 25%) crean una "pausa" para que el usuario pueda leer el testimonio antes de que pase al siguiente. */
 @keyframes slideAnimation {
   0%   { transform: translateX(0%); }
   25%  { transform: translateX(0%); }

@@ -74,6 +74,7 @@
   </div>
 
   <!-- CSS-only Blog Filter -->
+  <!-- [EXPLICACIÓN] Igual que en destinos.html, usamos radio buttons ocultos para saber qué filtro eligió el usuario. -->
   <input type="radio" name="blogtag" id="bt-all"        class="blog-filter-radio" checked aria-hidden="true">
   <input type="radio" name="blogtag" id="bt-cultura"    class="blog-filter-radio" aria-hidden="true">
   <input type="radio" name="blogtag" id="bt-naturaleza" class="blog-filter-radio" aria-hidden="true">
@@ -91,6 +92,8 @@
   <!-- Newspaper Grid -->
   <div class="newspaper-grid" role="list" aria-label="Artículos del blog">
 
+    <!-- [TRUCO FILTROS] El atributo data-tag="naturaleza" identifica el tipo de artículo para que el CSS
+         lo pueda ocultar usando selectores como :not([data-tag="naturaleza"]) cuando se marca otro filtro. -->
     <article class="article-card featured" data-tag="naturaleza" role="listitem" tabindex="0" aria-label="48 horas en la Patagonia">
       <img src="assets/blogpatagonia.jpg" alt="Blog de Patagonia" class="article-img">
       <div class="article-body">
