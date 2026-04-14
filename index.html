@@ -384,12 +384,7 @@
       : '';
   });
 
-  // Scroll reveal
-  const ro = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
-  }, {threshold:0.1, rootMargin:'0px 0px -60px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
+  
   // Newsletter
   document.getElementById('newsletterForm').addEventListener('submit', function(e){
     e.preventDefault();
