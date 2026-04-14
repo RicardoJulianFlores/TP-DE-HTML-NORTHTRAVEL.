@@ -98,7 +98,7 @@
   </section>
 
   <!-- DESTINOS DESTACADOS -->
-  <section class="section reveal" aria-labelledby="featured-title">
+  <section class="section reveal" id="section-reveal" aria-labelledby="featured-title">
     <div class="section-header">
       <p class="section-label">Selección editorial</p>
       <h2 class="section-title" id="featured-title">Destinos que te <em>robarán</em> el aliento</h2>
@@ -364,11 +364,6 @@
     updateLogo(t);
   });
   
-  // Scroll reveal
-  const ro = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
-  }, {threshold:0.1, rootMargin:'0px 0px -60px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   // Newsletter
   document.getElementById('newsletterForm').addEventListener('submit', function(e){
