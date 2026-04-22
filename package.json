@@ -1,0 +1,23 @@
+{
+  "name": "tp-htmlcss-northtravel",
+  "version": "1.0.0",
+  "description": "¡Bienvenido! Este documento explica de manera sencilla cómo está armado el proyecto para que puedas defenderlo y explicarlo sin problemas.",
+  "homepage": "https://github.com/RicardoJulianFlores/TP-DE-HTML-NORTHTRAVEL.#readme",
+  "bugs": {
+    "url": "https://github.com/RicardoJulianFlores/TP-DE-HTML-NORTHTRAVEL./issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoJulianFlores/TP-DE-HTML-NORTHTRAVEL..git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
