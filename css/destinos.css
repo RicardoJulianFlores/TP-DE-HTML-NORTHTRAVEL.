@@ -93,12 +93,6 @@
 /* Filter card visibility */
 .dest-card-item { transition:opacity 0.4s ease }
 
-#f-all:checked      ~ .masonry-grid .dest-card-item                          { display:block }
-#f-cultural:checked ~ .masonry-grid .dest-card-item:not([data-cat="cultural"])  { display:none }
-#f-nature:checked   ~ .masonry-grid .dest-card-item:not([data-cat="nature"])    { display:none }
-#f-beach:checked    ~ .masonry-grid .dest-card-item:not([data-cat="beach"])     { display:none }
-#f-gastro:checked   ~ .masonry-grid .dest-card-item:not([data-cat="gastro"])    { display:none }
-#f-religious:checked ~ .masonry-grid .dest-card-item:not([data-cat="religious"]){ display:none }
 
 /* ─── PRICE TABLE ────────────────────────── */
 .price-table-section {

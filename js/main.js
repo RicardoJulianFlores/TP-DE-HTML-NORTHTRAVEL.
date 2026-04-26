@@ -114,10 +114,21 @@ $(function () {
     // Botones de filtro jQuery (se crean si existen .filter-tab labels)
     $('.filter-tab').on('click', function () {
       // El CSS-only maneja la visibilidad; acá agregamos animación
+      const filter = $(this).attr('for').replace('f-', '');
+
       const $items = $('.dest-card-item');
-      $items.stop(true).fadeTo(200, 0, function () {
-        $(this).fadeTo(300, 1);
-      });
+
+      if (filter === 'all') {
+        $items.stop(true).show(300);
+      } else {
+        $items.hide(); // oculto todo
+        $items
+          .filter(function () {
+            return $(this).data('cat') === filter;
+          })
+          .show(300);
+      }
+
     });
 
     // Zoom hover en cards con jQuery
