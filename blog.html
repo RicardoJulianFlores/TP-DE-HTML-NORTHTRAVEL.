@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/sprite.css">
 </head>
 <body>
 
@@ -92,7 +93,7 @@
   <div class="newspaper-grid" role="list" aria-label="Artículos del blog">
 
     <article class="article-card featured" data-tag="naturaleza" role="listitem" tabindex="0" aria-label="48 horas en la Patagonia">
-      <img src="assets/blogpatagonia.jpg" alt="Blog de Patagonia" class="article-img">
+      <img src="assets/blogpatagonia.jpg" alt="Blog de Patagonia">
       <div class="article-body">
         <span class="article-category">🌿 Naturaleza · 8 min de lectura</span>
         <h2 class="article-title">48 horas en la Patagonia: lo que nadie te cuenta sobre el fin del mundo</h2>
@@ -156,7 +157,7 @@
     </article>
 
     <article class="article-card small" data-tag="naturaleza" role="listitem" tabindex="0" aria-label="Noches en el Atacama">
-      <img src="assets/blogatacama.webp" alt="Blog de Atacama" class="article-img">
+      <img src="assets/blogatacama.webp" alt="Blog de Atacama">
       <div class="article-body">
         <span class="article-category">🌿 Naturaleza</span>
         <h2 class="article-title">Noches mágicas en el Atacama: el cielo más puro del mundo</h2>
@@ -244,6 +245,7 @@
         <li><a href="#">Privacidad</a></li>
         <li><a href="#">Términos</a></li>
         <li><a href="#">Accesibilidad</a></li>
+        <li><a href="phishing.html">🛡️ Seguridad Digital</a></li>
       </ul>
     </div>
     <div>
@@ -274,36 +276,8 @@
   </div>
 </footer>
 
-<script>
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
 
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
-  // Newsletter form
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/sprite.css">
 </head>
 <body>
 
@@ -192,6 +193,7 @@
         <li><a href="#">Privacidad</a></li>
         <li><a href="#">Términos</a></li>
         <li><a href="#">Accesibilidad</a></li>
+        <li><a href="phishing.html">🛡️ Seguridad Digital</a></li>
       </ul>
     </div>
     <div>
@@ -223,31 +225,6 @@
 </footer>
 
 <script>
-  // Theme
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
-
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
   // Modal
   const modal = document.getElementById('successModal');
   document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
@@ -265,11 +242,8 @@
       modal.classList.add('open'); document.getElementById('modalClose').focus();
     }, 2200);
   });
-  // Newsletter
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
