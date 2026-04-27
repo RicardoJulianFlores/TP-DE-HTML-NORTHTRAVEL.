@@ -114,10 +114,10 @@ input, textarea, select { font-family:var(--font-body) }
 
 /* ─── REVEAL ANIMATION ───────────────────── */
 #section-reveal {
-  opacity: 0; transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 1; transform: translateY(40px);
+  transition: transform 0.8s ease;
 }
-#section-reveal:hover, #section-reveal:focus-within     { opacity:1; transform:translateY(0) }
+#section-reveal:hover, #section-reveal:focus-within     { transform:translateY(0) }
 
 /* ─── NAVIGATION ─────────────────────────── */
 .nav {
