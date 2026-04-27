@@ -6,10 +6,11 @@
    Orden: instagram | facebook | twitter | youtube | tiktok
 ═══════════════════════════════════════════ */
 
-.sprite {
+.social-link {
   display: inline-block;
-  width:  40px;
-  height: 40px;
+  width:  70px;
+  height: 70px;
+  border-radius:50%;
   background-image: url('../assets/sprite.png');
   background-repeat: no-repeat;
   /* Fallback si la imagen no carga: muestra el emoji del ::after */
@@ -17,11 +18,11 @@
 }
 
 /* ─── Posiciones horizontales ────────────── */
-.sprite-instagram { background-position:   0px  0; }
-.sprite-facebook  { background-position: -40px  0; }
-.sprite-twitter   { background-position: -80px  0; }
-.sprite-youtube   { background-position:-120px  0; }
-.sprite-tiktok    { background-position:-160px  0; }
+.sprite-instagram { background-position: -992px  -120px; }
+.sprite-facebook  { background-position: -122px  -120px; }
+.sprite-twitter   { background-position: -292px  -120px; }
+.sprite-youtube   { background-position: -642px  -120px; }
+.sprite-tiktok    { background-position: -472px  -120px; }
 
 /* ─── Versión pequeña (navbar/cards) ─────── */
 .sprite-sm {
