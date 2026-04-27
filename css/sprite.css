@@ -2,7 +2,7 @@
    WANDERLUST — SPRITE CSS
    Iconos unificados en una sola imagen.
    Imagen sprite: assets/sprite.png
-   Dimensiones: 5 iconos × 40px = 200px × 40px
+   Dimensiones: 5 iconos × 40px = 1920px × 521px
    Orden: instagram | facebook | twitter | youtube | tiktok
 ═══════════════════════════════════════════ */
 
@@ -11,6 +11,7 @@
   width:  70px;
   height: 70px;
   border-radius:50%;
+  background-size: 1344px 364px;
   background-image: url('../assets/sprite.png');
   background-repeat: no-repeat;
   /* Fallback si la imagen no carga: muestra el emoji del ::after */
@@ -18,11 +19,11 @@
 }
 
 /* ─── Posiciones horizontales ────────────── */
-.sprite-instagram { background-position: -992px  -120px; }
-.sprite-facebook  { background-position: -122px  -120px; }
-.sprite-twitter   { background-position: -292px  -120px; }
-.sprite-youtube   { background-position: -642px  -120px; }
-.sprite-tiktok    { background-position: -472px  -120px; }
+.sprite-instagram { background-position: -698px  -88px; }
+.sprite-facebook  { background-position: -88px  -88px; }
+.sprite-twitter   { background-position: -208px  -88px; }
+.sprite-youtube   { background-position: -453px  -88px; }
+.sprite-tiktok    { background-position: -330px  -88px; }
 
 /* ─── Versión pequeña (navbar/cards) ─────── */
 .sprite-sm {
