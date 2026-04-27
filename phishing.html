@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguridad Digital — NorthTravel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/phishing.css">
+  <link rel="stylesheet" href="css/sprite.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo">
+    <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
+  </a>
+  <div class="nav-links" role="menubar">
+    <div class="nav-item">
+      <a class="nav-link" href="destinos.html">Destinos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="destinos.html"><strong>🏛️ Cultural</strong><span>Arte, historia y patrimonio</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🌿 Naturaleza</strong><span>Parques y ecoturismo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🏖️ Sol y Playa</strong><span>Destinos costeros</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🍽️ Gastronómico</strong><span>Sabores del mundo</span></a>
+        <a class="mega-item" href="destinos.html"><strong>⛪ Religioso</strong><span>Peregrinaciones y fe</span></a>
+        <a class="mega-item" href="destinos.html"><strong>🗺️ Ver Todos</strong><span>Explorar todo el catálogo</span></a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="agencias.html">Agencias
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <a class="mega-item" href="agencias.html"><strong>🌍 Internacionales</strong><span>Operadores globales</span></a>
+        <a class="mega-item" href="agencias.html"><strong>🇦🇷 Nacionales</strong><span>Agencias locales</span></a>
+        <a class="mega-item" href="contacto.html"><strong>📋 Contactar</strong><span>Formulario de consulta</span></a>
+        <a class="mega-item" href="agencias.html"><strong>⭐ Mejor Valoradas</strong><span>Top agencias del año</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <div class="nav-item" role="none">
+      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
+        Precios
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
+        <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
+      </div>
+    </div>
+    <a class="nav-link" href="blog.html">Blog</a>
+    <a class="nav-link" href="phishing.html">Seguridad</a>
+  </div>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+    <a href="contacto.html" class="btn btn-primary">Reservar</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ MODAL PHISHING SIMULACIÓN ════════ -->
+<div class="modal-overlay" id="phishingModal" role="dialog" aria-modal="true" aria-labelledby="phishingModalTitle">
+  <div class="modal-box phishing-modal">
+    <div class="modal-warning-banner">
+      ⚠️ SIMULACIÓN EDUCATIVA — NO ES REAL
+    </div>
+    <h2 class="modal-title" id="phishingModalTitle">Ejemplo de email de Phishing</h2>
+    <div class="fake-email" id="fakeEmail">
+      <div class="email-header">
+        <strong>De:</strong> soporte@northtravel-seguro.com.xyz<br>
+        <strong>Para:</strong> usted@email.com<br>
+        <strong>Asunto:</strong> ¡Tu cuenta será suspendida en 24hs!
+      </div>
+      <div class="email-body">
+        <p>Estimado cliente de <strong>NorthTravel</strong>,</p>
+        <p>Hemos detectado actividad sospechosa en su cuenta. Para evitar la <strong>suspensión permanente</strong>, debe verificar sus datos <u>inmediatamente</u>.</p>
+        <p>👉 <a href="#" class="phishing-link" onclick="return false;">Hacer clic AQUÍ para verificar su cuenta</a></p>
+        <p style="font-size:0.75rem;color:#999">NorthTravel Security Team · copyright 2026</p>
+      </div>
+    </div>
+
+    <div class="errors-section">
+      <h3>¿Cuántas señales de fraude encontrás?</h3>
+      <div class="error-list" id="errorList">
+        <label class="error-item" data-correct="true">
+          <input type="checkbox" class="error-check" value="dominio">
+          <span class="error-label">El dominio del remitente es sospechoso (<code>northtravel-seguro.com.xyz</code>)</span>
+          <span class="feedback-icon"></span>
+        </label>
+        <label class="error-item" data-correct="true">
+          <input type="checkbox" class="error-check" value="urgencia">
+          <span class="error-label">Crea urgencia artificial ("suspensión en 24hs")</span>
+          <span class="feedback-icon"></span>
+        </label>
+        <label class="error-item" data-correct="true">
+          <input type="checkbox" class="error-check" value="link">
+          <span class="error-label">El link genérico "clic AQUÍ" oculta la URL real</span>
+          <span class="feedback-icon"></span>
+        </label>
+        <label class="error-item" data-correct="false">
+          <input type="checkbox" class="error-check" value="logotipo">
+          <span class="error-label">El email no tiene logotipo de la empresa</span>
+          <span class="feedback-icon"></span>
+        </label>
+        <label class="error-item" data-correct="true">
+          <input type="checkbox" class="error-check" value="amenaza">
+          <span class="error-label">Amenaza con consecuencias graves para presionar</span>
+          <span class="feedback-icon"></span>
+        </label>
+        <label class="error-item" data-correct="true">
+          <input type="checkbox" class="error-check" value="saludo">
+          <span class="error-label">Saludo genérico ("Estimado cliente") sin nombre real</span>
+          <span class="feedback-icon"></span>
+        </label>
+      </div>
+      <button class="btn btn-primary" id="checkAnswers" style="margin-top:20px;width:100%">Verificar mis respuestas</button>
+      <div class="score-result" id="scoreResult" style="display:none"></div>
+    </div>
+
+    <button class="btn btn-outline" id="closePhishingModal" style="width:100%;margin-top:12px">Cerrar simulación</button>
+  </div>
+</div>
+
+<!-- ═══ MAIN ══════════════════════════════ -->
+<main id="main-content">
+
+  <div class="phishing-hero">
+    <p class="section-label">Módulo educativo</p>
+    <h1 class="section-title">¿Sabés reconocer el <em>Phishing</em>?</h1>
+    <p class="section-sub">El fraude digital más común en el turismo online. Aprendé a protegerte.</p>
+  </div>
+
+  <!-- Alerta informativa -->
+  <div class="info-alert" role="alert">
+    <span class="alert-icon">ℹ️</span>
+    <div>
+      <strong>Este módulo es 100% educativo.</strong> No se recopilan datos reales. Los ejemplos mostrados son simulaciones creadas para enseñar a identificar fraudes digitales.
+    </div>
+  </div>
+
+  <!-- ─── SECCIÓN: QUÉ ES PHISHING ──────── -->
+  <section class="ph-section" aria-labelledby="que-es">
+    <div class="section-header">
+      <p class="section-label">Concepto</p>
+      <h2 class="section-title" id="que-es">¿Qué es el <em>phishing</em>?</h2>
+    </div>
+    <div class="ph-grid">
+      <div class="ph-card reveal">
+        <span class="ph-icon">🎣</span>
+        <h3>Definición</h3>
+        <p>El <strong>phishing</strong> es un tipo de estafa digital donde los delincuentes se hacen pasar por empresas o personas de confianza para robar contraseñas, datos bancarios o información personal.</p>
+      </div>
+      <div class="ph-card reveal">
+        <span class="ph-icon">📧</span>
+        <h3>¿Cómo funciona?</h3>
+        <p>Envían emails, SMS o mensajes falsos que imitan comunicaciones legítimas, con links que llevan a sitios web falsos donde solicitan tus datos.</p>
+      </div>
+      <div class="ph-card reveal">
+        <span class="ph-icon">✈️</span>
+        <h3>En turismo</h3>
+        <p>Los fraudes más comunes son: falsas ofertas de vuelos, confirmaciones de reserva falsas, sitios de hoteles clonados y "agencias de viaje" inexistentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECCIÓN: SEÑALES DE ALERTA ────── -->
+  <section class="signals-section" aria-labelledby="senales">
+    <div class="section-header">
+      <p class="section-label">Aprendé a identificarlos</p>
+      <h2 class="section-title" id="senales">Las <em>señales</em> de fraude</h2>
+    </div>
+    <div class="signals-grid">
+
+      <div class="signal-item reveal">
+        <div class="signal-num">01</div>
+        <div class="signal-icon">🌐</div>
+        <h3>Dominio sospechoso</h3>
+        <p>Verificá siempre el dominio del remitente. <code>northtravel.com.ar</code> es legítimo. <code>northtravel-secure.xyz</code> o <code>northtravel.support.net</code> son falsificaciones.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ soporte@northtravel-seguro.com.xyz</span>
+          <span class="sig-good">✓ hola@northtravel.com.ar</span>
+        </div>
+      </div>
+
+      <div class="signal-item reveal">
+        <div class="signal-num">02</div>
+        <div class="signal-icon">⏰</div>
+        <h3>Urgencia artificial</h3>
+        <p>Los estafadores crean presión con frases como "tu cuenta será suspendida", "oferta por 2 horas" o "último lugar disponible". Las empresas legítimas no actúan así.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ "¡Verificá en las próximas 24hs o perderás tu cuenta!"</span>
+        </div>
+      </div>
+
+      <div class="signal-item reveal">
+        <div class="signal-num">03</div>
+        <div class="signal-icon">🔗</div>
+        <h3>Links engañosos</h3>
+        <p>Antes de hacer clic, pasá el mouse sobre el link (sin hacer clic) y verificá la URL que aparece abajo. Si no coincide con el sitio oficial, es falso.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ Texto: "NorthTravel" → URL real: http://192.168.1.1/robar</span>
+        </div>
+      </div>
+
+      <div class="signal-item reveal">
+        <div class="signal-num">04</div>
+        <div class="signal-icon">📝</div>
+        <h3>Errores y saludos genéricos</h3>
+        <p>Los emails de phishing suelen tener errores ortográficos, mala gramática o saludos genéricos como "Estimado usuario" en lugar de tu nombre real.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ "Estimado cliente valioso"</span>
+          <span class="sig-good">✓ "Hola, María García"</span>
+        </div>
+      </div>
+
+      <div class="signal-item reveal">
+        <div class="signal-num">05</div>
+        <div class="signal-icon">🔒</div>
+        <h3>Solicitud de datos sensibles</h3>
+        <p>Ninguna empresa legítima te pedirá por email tu contraseña, número de tarjeta completo o código PIN. Jamás.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ "Ingresá tu contraseña para verificar tu identidad"</span>
+        </div>
+      </div>
+
+      <div class="signal-item reveal">
+        <div class="signal-num">06</div>
+        <div class="signal-icon">🎯</div>
+        <h3>Ofertas demasiado buenas</h3>
+        <p>Si una oferta parece demasiado buena para ser real, probablemente es fraude. Vuelos gratis, hoteles a $1 o sorteos que "ganaste" sin participar son señales claras.</p>
+        <div class="signal-example">
+          <span class="sig-bad">✗ "¡Ganaste 2 pasajes a Miami! Hacé clic para reclamar"</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── BOTÓN SIMULACIÓN ───────────────── -->
+  <section class="simulation-cta" aria-label="Iniciar simulación">
+    <h2>¿Listo para poner a prueba tu ojo crítico?</h2>
+    <p>Analizá un email de phishing real simulado e identificá todas las señales de fraude.</p>
+    <button class="btn btn-primary btn-lg" id="startSimulation">
+      🎯 Iniciar Simulación de Phishing
+    </button>
+    <p class="cta-disclaimer">⚠️ Solo con fines educativos. No se robarán datos reales.</p>
+  </section>
+
+  <!-- ─── CONSEJOS DE PROTECCIÓN ─────────── -->
+  <section class="protection-section" aria-labelledby="proteccion">
+    <div class="section-header">
+      <p class="section-label">Protegete</p>
+      <h2 class="section-title" id="proteccion">¿Qué hacer si <em>sospechás</em>?</h2>
+    </div>
+    <div class="protection-steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <p><strong>No hagas clic</strong> en ningún link del mensaje sospechoso</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <p><strong>No respondas</strong> ni descargues adjuntos del email</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <p><strong>Verificá</strong> ingresando directamente al sitio oficial desde tu navegador</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <p><strong>Reportá</strong> el email como spam/phishing en tu cliente de correo</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">5</div>
+        <p><strong>Contactá</strong> a la empresa directamente por sus canales oficiales</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
+      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link sprite-instagram" aria-label="Instagram" role="listitem"></a>
+        <a href="#" class="social-link sprite-facebook" aria-label="Facebook" role="listitem"></a>
+        <a href="#" class="social-link sprite-twitter" aria-label="Twitter/X" role="listitem"></a>
+        <a href="#" class="social-link sprite-youtube" aria-label="YouTube" role="listitem"></a>
+        <a href="#" class="social-link sprite-tiktok" aria-label="TikTok" role="listitem"></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Explorar</h3>
+      <ul class="footer-links">
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Información</h3>
+      <ul class="footer-links">
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="phishing.html">Seguridad Digital</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Newsletter</h3>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="tu@email.com" required aria-label="Email">
+        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
+      </form>
+      <div class="map-container" style="margin-top:16px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1051.2575612087483!2d-65.29996631611341!3d-24.18550866512147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f433cd59b63%3A0xfb2e08060c8cc2b4!2sSecretaria%20de%20Turismo%20de%20Jujuy-%20Oficina%20de%20Información%20Turística!5e0!3m2!1ses!2sar!4v1776037110346!5m2!1ses!2sar" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NorthTravel Turismo.</span>
+    <span>Hecho con ❤️ para exploradores</span>
+  </div>
+</footer>
+
+<!-- jQuery + main.js -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function () {
+
+  /* ─── Abrir modal simulación ─── */
+  $('#startSimulation').on('click', function () {
+    $('#phishingModal').addClass('open');
+    // Reset del quiz
+    $('.error-check').prop('checked', false);
+    $('.error-item').removeClass('correct incorrect');
+    $('.feedback-icon').text('');
+    $('#scoreResult').hide().text('');
+  });
+
+  $('#closePhishingModal, #phishingModal').on('click', function (e) {
+    if (e.target === this || $(e.target).is('#closePhishingModal')) {
+      $('#phishingModal').removeClass('open');
+    }
+  });
+
+  /* ─── Verificar respuestas del quiz ─── */
+  $('#checkAnswers').on('click', function () {
+    let correct = 0, total = 0;
+
+    $('.error-item').each(function () {
+      const $item     = $(this);
+      const isCorrect = $item.data('correct') === true;
+      const checked   = $item.find('.error-check').prop('checked');
+      const $icon     = $item.find('.feedback-icon');
+
+      total++;
+
+      if (isCorrect && checked) {
+        $item.addClass('correct').removeClass('incorrect');
+        $icon.text(' ✅');
+        correct++;
+      } else if (!isCorrect && !checked) {
+        $item.addClass('correct').removeClass('incorrect');
+        $icon.text(' ✅');
+        correct++;
+      } else {
+        $item.addClass('incorrect').removeClass('correct');
+        $icon.text(isCorrect ? ' ❌ (Era señal real)' : ' ❌ (No es señal de fraude)');
+      }
+    });
+
+    const pct   = Math.round((correct / total) * 100);
+    let msg     = '';
+    let color   = '';
+
+    if (pct === 100) {
+      msg   = `🏆 ¡Perfecto! ${correct}/${total}. Sos un experto anti-phishing.`;
+      color = 'var(--clr-accent2)';
+    } else if (pct >= 60) {
+      msg   = `👍 Bien! ${correct}/${total}. Revisá las señales marcadas en rojo.`;
+      color = 'var(--clr-gold)';
+    } else {
+      msg   = `⚠️ ${correct}/${total}. Te recomendamos repasar las señales de esta página.`;
+      color = 'var(--clr-accent)';
+    }
+
+    $('#scoreResult')
+      .css({ color: color, fontWeight: '600', padding: '12px', borderRadius: '8px',
+             background: 'var(--clr-surface2)', marginTop: '12px' })
+      .text(msg)
+      .slideDown(300);
+  });
+
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') $('#phishingModal').removeClass('open');
+  });
+});
+</script>
+</body>
+</html>

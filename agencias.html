@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/agencias.css">
+  <link rel="stylesheet" href="css/sprite.css">
 </head>
 <body>
 
@@ -56,6 +57,7 @@
       </div>
     </div>
     <a class="nav-link" href="blog.html">Blog</a>
+    <a class="nav-link" href="phishing.html">Seguridad</a>
   </div>
   <div class="nav-actions">
     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
@@ -195,10 +197,11 @@
       <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
       <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
       <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">📸</a>
-        <a href="#" class="social-link" aria-label="Facebook">👤</a>
-        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+        <a href="#" class="social-link sprite-instagram" aria-label="Instagram" role="listitem"></a>
+        <a href="#" class="social-link sprite-facebook" aria-label="Facebook" role="listitem"></a>
+        <a href="#" class="social-link sprite-twitter" aria-label="Twitter/X" role="listitem"></a>
+        <a href="#" class="social-link sprite-youtube" aria-label="YouTube" role="listitem"></a>
+        <a href="#" class="social-link sprite-tiktok" aria-label="TikTok" role="listitem"></a>
       </div>
     </div>
     <div>
@@ -214,9 +217,10 @@
       <h3 class="footer-heading">Información</h3>
       <ul class="footer-links">
         <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Términos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Accesibilidad</a></li>
+        <li><a href="phishing.html">Seguridad Digital</a></li>
       </ul>
     </div>
     <div>
@@ -247,35 +251,8 @@
   </div>
 </footer>
 
-<script>
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
 
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

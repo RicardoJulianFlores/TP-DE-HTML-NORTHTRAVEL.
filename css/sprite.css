@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════
+   WANDERLUST — SPRITE CSS
+   Iconos unificados en una sola imagen.
+   Imagen sprite: assets/sprite.png
+   Dimensiones: 5 iconos × 40px = 1920px × 521px
+   Orden: instagram | facebook | twitter | youtube | tiktok
+═══════════════════════════════════════════ */
+
+.social-link {
+  display: inline-block;
+  width:  70px;
+  height: 70px;
+  border-radius:50%;
+  background-size: 1344px 364px;
+  background-image: url('../assets/sprite.png');
+  background-repeat: no-repeat;
+  /* Fallback si la imagen no carga: muestra el emoji del ::after */
+  background-color: transparent;
+}
+
+/* ─── Posiciones horizontales ────────────── */
+.sprite-instagram { background-position: -698px  -88px; }
+.sprite-facebook  { background-position: -88px  -88px; }
+.sprite-twitter   { background-position: -208px  -88px; }
+.sprite-youtube   { background-position: -453px  -88px; }
+.sprite-tiktok    { background-position: -330px  -88px; }
+
+/* ─── Versión pequeña (navbar/cards) ─────── */
+.sprite-sm {
+  width:  24px;
+  height: 24px;
+  background-size: 120px 24px; /* escala 60% */
+}
+.sprite-sm.sprite-instagram { background-position:   0px 0; }
+.sprite-sm.sprite-facebook  { background-position: -24px 0; }
+.sprite-sm.sprite-twitter   { background-position: -48px 0; }
+.sprite-sm.sprite-youtube   { background-position: -72px 0; }
+.sprite-sm.sprite-tiktok    { background-position: -96px 0; }
+
+/* ─── Hover / focus ──────────────────────── */
+.sprite-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width:  40px;
+  height: 40px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  background: rgba(255,255,255,0.10);
+}
+.sprite-link:hover  { transform: translateY(-3px); opacity: 0.85; }
+.sprite-link:focus  { outline: 2px solid var(--clr-accent); outline-offset: 2px; }
+
+/* ─── Iconos para botones ────────────────── */
+/* Tamaño 32×32 para usar dentro de .btn */
+.sprite-btn {
+  width:  20px;
+  height: 20px;
+  background-image: url('../assets/sprite.png');
+  background-repeat: no-repeat;
+  background-size: 100px 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sprite-btn-share  { background-position:  0px 0; } /* usa icono instagram */
+.sprite-btn-like   { background-position:-20px 0; } /* usa icono facebook  */
+.sprite-btn-share2 { background-position:-40px 0; } /* usa icono twitter   */

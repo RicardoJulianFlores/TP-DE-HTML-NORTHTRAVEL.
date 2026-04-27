@@ -6,16 +6,19 @@
   <title>Precios — NorthTravel Turismo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- ★ Bootstrap 5.3 CSS ★ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/precios.css">
+  <link rel="stylesheet" href="css/sprite.css">
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<!-- ═══ NAVEGACIÓN ═══════════════════════ -->
-<nav class="nav" role="navigation" aria-label="Navegación principal">
-  <a href="index.html" class="nav-logo">
+<!-- ═══ NAVEGACIÓN ═══ -->
+<nav class="nav navbar navbar-expand-lg" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="navbar-brand nav-logo">
     <img class="logo-img" id="logoimg" src="assets/logolight.png" data-light="assets/logolight.png" data-dark="assets/logodark.png" alt="Logo NorthTravel">
   </a>
   <div class="nav-links" role="menubar">
@@ -45,264 +48,245 @@
     </div>
     <a class="nav-link" href="index.html">Inicio</a>
     <div class="nav-item" role="none">
-      <a class="nav-link" href="precios.html" role="menuitem" aria-haspopup="true">
+      <a class="nav-link active" href="precios.html" role="menuitem" aria-haspopup="true" aria-current="page">
         Precios
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
-      <div class="mega-menu" role="menu" aria-label="Submenú Agencias">
+      <div class="mega-menu" role="menu">
         <a class="mega-item" href="precios.html" role="menuitem"><strong>🌱 Explorador</strong><span>$480 por persona / 5 dias</span></a>
         <a class="mega-item" href="precios.html" role="menuitem"><strong>🌟 Viajero</strong><span>$890 por persona / 7 dias</span></a>
         <a class="mega-item" href="precios.html" role="menuitem"><strong>💎 Expedicionario</strong><span>$1,840 por persona / 12 dias</span></a>
       </div>
     </div>
     <a class="nav-link" href="blog.html">Blog</a>
+    <a class="nav-link" href="phishing.html">Seguridad</a>
   </div>
-  <div class="nav-actions">
+  <div class="nav-actions d-flex align-items-center gap-2">
     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
     <a href="contacto.html" class="btn btn-primary">Reservar</a>
     <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- ═══ MAIN ══════════════════════════════ -->
+<!-- ═══ MAIN ═══ -->
 <main id="main-content">
 
-  <div class="pricing-hero">
+  <div class="pricing-hero text-center py-5">
     <p class="section-label">Planes transparentes</p>
     <h1 class="section-title">Elige tu <em>experiencia</em></h1>
     <p class="section-sub">Sin costos ocultos. Sin sorpresas. Solo aventuras increíbles.</p>
   </div>
 
-  <div class="pricing-grid" role="list" aria-label="Planes de precios">
+  <!-- Bootstrap row para pricing cards (con align-items-stretch) -->
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 align-items-start mb-5" role="list" aria-label="Planes de precios">
 
-    <!-- Plan Explorador -->
-    <div class="pricing-card" role="listitem" tabindex="0" aria-label="Plan Explorador">
-      <span class="pricing-tier">🌱 Explorador</span>
-      <div class="pricing-amount"><sup>$</sup>480</div>
-      <span class="pricing-period">por persona / 5 días</span>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features" aria-label="Características del plan Explorador">
-        <li class="pricing-feature">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Vuelos incluidos
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Vuelo directo en clase económica</span>
-          </span>
-        </li>
-        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Hotel 3★ con desayuno</li>
-        <li class="pricing-feature">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">2 actividades incluidas
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Tours guiados a los principales atractivos</span>
-          </span>
-        </li>
-        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Seguro de viaje básico</li>
-        <li class="pricing-feature" style="opacity:0.4"><span aria-hidden="true">✗</span> Traslados privados</li>
-        <li class="pricing-feature" style="opacity:0.4"><span aria-hidden="true">✗</span> Guía privado</li>
-      </ul>
-      <a href="contacto.html" class="btn btn-outline" style="width:100%;justify-content:center">Reservar Explorador</a>
+      <!-- Plan Explorador -->
+      <div class="col" role="listitem">
+        <div class="pricing-card h-100" tabindex="0" aria-label="Plan Explorador">
+          <span class="pricing-tier">🌱 Explorador</span>
+          <div class="pricing-amount"><sup>$</sup>480</div>
+          <span class="pricing-period d-block">por persona / 5 días</span>
+          <div class="pricing-divider my-3"></div>
+          <ul class="pricing-features list-unstyled mb-4" aria-label="Características del plan Explorador">
+            <li class="pricing-feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Vuelos incluidos
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Vuelo directo en clase económica</span>
+              </span>
+            </li>
+            <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Hotel 3★ con desayuno</li>
+            <li class="pricing-feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">2 actividades incluidas
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Tours guiados a los principales atractivos</span>
+              </span>
+            </li>
+            <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Seguro de viaje básico</li>
+            <li class="pricing-feature" style="opacity:0.4"><span aria-hidden="true">✗</span> Traslados privados</li>
+            <li class="pricing-feature" style="opacity:0.4"><span aria-hidden="true">✗</span> Guía privado</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-outline w-100 d-flex justify-content-center">Reservar Explorador</a>
+        </div>
+      </div>
+
+      <!-- Plan Viajero (featured) -->
+      <div class="col" role="listitem">
+        <div class="pricing-card featured h-100" tabindex="0" aria-label="Plan Viajero - Recomendado">
+          <div class="pricing-badge badge bg-white text-danger" aria-label="Más popular">⭐ Más Popular</div>
+          <span class="pricing-tier" style="color:rgba(255,255,255,0.8)">🌟 Viajero</span>
+          <div class="pricing-amount" style="color:#fff"><sup>$</sup>890</div>
+          <span class="pricing-period d-block" style="color:rgba(255,255,255,0.7)">por persona / 7 días</span>
+          <div class="pricing-divider my-3"></div>
+          <ul class="pricing-features list-unstyled mb-4" aria-label="Características del plan Viajero">
+            <li class="pricing-feature" style="color:#fff">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Vuelos incluidos
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Incluye acceso ilimitado a salas VIP en aeropuertos</span>
+              </span>
+            </li>
+            <li class="pricing-feature" style="color:#fff"><span class="check" aria-hidden="true">✓</span> Hotel 4★ con media pensión</li>
+            <li class="pricing-feature" style="color:#fff">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Actividades ilimitadas
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Más de 15 actividades guiadas disponibles</span>
+              </span>
+            </li>
+            <li class="pricing-feature" style="color:#fff"><span class="check" aria-hidden="true">✓</span> Seguro de viaje premium</li>
+            <li class="pricing-feature" style="color:#fff">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Traslados privados
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Vehículo privado en todos los traslados</span>
+              </span>
+            </li>
+            <li class="pricing-feature" style="color:rgba(255,255,255,0.5)"><span aria-hidden="true">✗</span> Guía privado exclusivo</li>
+          </ul>
+          <a href="contacto.html" class="btn w-100 d-flex justify-content-center fw-bold" style="background:#fff;color:var(--clr-accent)">Reservar Viajero ✈️</a>
+        </div>
+      </div>
+
+      <!-- Plan Expedicionario -->
+      <div class="col" role="listitem">
+        <div class="pricing-card h-100" tabindex="0" aria-label="Plan Expedicionario">
+          <span class="pricing-tier">💎 Expedicionario</span>
+          <div class="pricing-amount"><sup>$</sup>1,840</div>
+          <span class="pricing-period d-block">por persona / 12 días</span>
+          <div class="pricing-divider my-3"></div>
+          <ul class="pricing-features list-unstyled mb-4" aria-label="Características del plan Expedicionario">
+            <li class="pricing-feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Vuelos en Business
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Business Class + salas VIP + equipaje extra</span>
+              </span>
+            </li>
+            <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Hotel 5★ todo incluido</li>
+            <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Experiencias exclusivas</li>
+            <li class="pricing-feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Seguro VIP + Médico 24/7
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Médico disponible 24/7 + evacuación de emergencia</span>
+              </span>
+            </li>
+            <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Traslados en limusina</li>
+            <li class="pricing-feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <span class="tooltip-wrap">Guía privado exclusivo
+                <span class="tooltip-icon" aria-label="Más info">i</span>
+                <span class="tooltip-text" role="tooltip">Guía políglota certificado, dedicado todo el viaje</span>
+              </span>
+            </li>
+          </ul>
+          <a href="contacto.html" class="btn btn-primary w-100 d-flex justify-content-center">Reservar Expedicionario</a>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Plan Viajero (featured) -->
-    <div class="pricing-card featured" role="listitem" tabindex="0" aria-label="Plan Viajero - Recomendado">
-      <div class="pricing-badge" aria-label="Más popular">⭐ Más Popular</div>
-      <span class="pricing-tier" style="color:rgba(255,255,255,0.8)">🌟 Viajero</span>
-      <div class="pricing-amount" style="color:#fff"><sup>$</sup>890</div>
-      <span class="pricing-period" style="color:rgba(255,255,255,0.7)">por persona / 7 días</span>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features" aria-label="Características del plan Viajero">
-        <li class="pricing-feature" style="color:#fff">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Vuelos incluidos
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Incluye acceso ilimitado a salas VIP en aeropuertos</span>
-          </span>
-        </li>
-        <li class="pricing-feature" style="color:#fff"><span class="check" aria-hidden="true">✓</span> Hotel 4★ con media pensión</li>
-        <li class="pricing-feature" style="color:#fff">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Actividades ilimitadas
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Más de 15 actividades guiadas disponibles</span>
-          </span>
-        </li>
-        <li class="pricing-feature" style="color:#fff"><span class="check" aria-hidden="true">✓</span> Seguro de viaje premium</li>
-        <li class="pricing-feature" style="color:#fff">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Traslados privados
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Vehículo privado en todos los traslados</span>
-          </span>
-        </li>
-        <li class="pricing-feature" style="color:rgba(255,255,255,0.5)"><span aria-hidden="true">✗</span> Guía privado exclusivo</li>
-      </ul>
-      <a href="contacto.html" class="btn" style="width:100%;background:#fff;color:var(--clr-accent);justify-content:center;font-weight:700">Reservar Viajero ✈️</a>
-    </div>
-
-    <!-- Plan Expedicionario -->
-    <div class="pricing-card" role="listitem" tabindex="0" aria-label="Plan Expedicionario">
-      <span class="pricing-tier">💎 Expedicionario</span>
-      <div class="pricing-amount"><sup>$</sup>1,840</div>
-      <span class="pricing-period">por persona / 12 días</span>
-      <div class="pricing-divider"></div>
-      <ul class="pricing-features" aria-label="Características del plan Expedicionario">
-        <li class="pricing-feature">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Vuelos en Business
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Business Class + salas VIP + equipaje extra</span>
-          </span>
-        </li>
-        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Hotel 5★ todo incluido</li>
-        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Experiencias exclusivas</li>
-        <li class="pricing-feature">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Seguro VIP + Médico 24/7
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Médico disponible 24/7 + evacuación de emergencia</span>
-          </span>
-        </li>
-        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Traslados en limusina</li>
-        <li class="pricing-feature">
-          <span class="check" aria-hidden="true">✓</span>
-          <span class="tooltip-wrap">Guía privado exclusivo
-            <span class="tooltip-icon" aria-label="Más info">i</span>
-            <span class="tooltip-text" role="tooltip">Guía políglota certificado, dedicado todo el viaje</span>
-          </span>
-        </li>
-      </ul>
-      <a href="contacto.html" class="btn btn-primary" style="width:100%;justify-content:center">Reservar Expedicionario</a>
-    </div>
-
   </div>
 
-  <!-- Garantías -->
+  <!-- Garantías (Bootstrap row) -->
   <section class="guarantees-section" aria-labelledby="guarantees-title">
     <div class="section-header">
       <p class="section-label">Garantía</p>
       <h2 class="section-title" id="guarantees-title">Nuestra promesa de <em>calidad</em></h2>
     </div>
-    <div class="guarantees-grid">
-      <div class="guarantee-item">
-        <span class="guarantee-icon" aria-hidden="true">🛡️</span>
-        <h3 class="guarantee-title">Garantía de satisfacción</h3>
-        <p class="guarantee-desc">Si no cumplimos tus expectativas, te devolvemos el 100%</p>
+    <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center" style="max-width:900px;margin:0 auto">
+      <div class="col">
+        <div class="guarantee-item text-center">
+          <span class="guarantee-icon d-block mb-2" aria-hidden="true">🛡️</span>
+          <h3 class="guarantee-title">Garantía de satisfacción</h3>
+          <p class="guarantee-desc">Si no cumplimos tus expectativas, te devolvemos el 100%</p>
+        </div>
       </div>
-      <div class="guarantee-item">
-        <span class="guarantee-icon" aria-hidden="true">🔒</span>
-        <h3 class="guarantee-title">Pago seguro</h3>
-        <p class="guarantee-desc">Cifrado SSL de grado bancario en todos los pagos</p>
+      <div class="col">
+        <div class="guarantee-item text-center">
+          <span class="guarantee-icon d-block mb-2" aria-hidden="true">🔒</span>
+          <h3 class="guarantee-title">Pago seguro</h3>
+          <p class="guarantee-desc">Cifrado SSL de grado bancario en todos los pagos</p>
+        </div>
       </div>
-      <div class="guarantee-item">
-        <span class="guarantee-icon" aria-hidden="true">🕐</span>
-        <h3 class="guarantee-title">Soporte 24/7</h3>
-        <p class="guarantee-desc">Asistencia durante todo tu viaje en tu idioma</p>
+      <div class="col">
+        <div class="guarantee-item text-center">
+          <span class="guarantee-icon d-block mb-2" aria-hidden="true">🕐</span>
+          <h3 class="guarantee-title">Soporte 24/7</h3>
+          <p class="guarantee-desc">Asistencia durante todo tu viaje en tu idioma</p>
+        </div>
       </div>
-      <div class="guarantee-item">
-        <span class="guarantee-icon" aria-hidden="true">🌱</span>
-        <h3 class="guarantee-title">Viaje sostenible</h3>
-        <p class="guarantee-desc">Compensamos el 100% de la huella de carbono de tu viaje</p>
+      <div class="col">
+        <div class="guarantee-item text-center">
+          <span class="guarantee-icon d-block mb-2" aria-hidden="true">🌱</span>
+          <h3 class="guarantee-title">Viaje sostenible</h3>
+          <p class="guarantee-desc">Compensamos el 100% de la huella de carbono de tu viaje</p>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ═══ FOOTER ════════════════════════════ -->
+<!-- ═══ FOOTER ═══ -->
 <footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="nav-logo">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
-      <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">📸</a>
-        <a href="#" class="social-link" aria-label="Facebook">👤</a>
-        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-lg-5 footer-brand">
+        <a href="index.html" class="nav-logo d-block mb-3">North<span style="color:rgba(255,255,255,0.5)">Travel</span></a>
+        <p class="footer-desc">Creamos experiencias de viaje que transforman perspectivas y crean memorias para toda la vida.</p>
+        <div class="footer-social d-flex gap-2">
+          <a href="#" class="social-link sprite-instagram" aria-label="Instagram"></a>
+          <a href="#" class="social-link sprite-facebook" aria-label="Facebook"></a>
+          <a href="#" class="social-link sprite-twitter" aria-label="Twitter/X"></a>
+          <a href="#" class="social-link sprite-youtube" aria-label="YouTube"></a>
+          <a href="#" class="social-link sprite-tiktok" aria-label="TikTok"></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="footer-heading">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="agencias.html">Agencias</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="footer-heading">Información</h3>
+        <ul class="footer-links">
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Accesibilidad</a></li>
+          <li><a href="phishing.html">Seguridad Digital</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-3">
+        <h3 class="footer-heading">Newsletter</h3>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="tu@email.com" required aria-label="Email" class="form-control mb-2">
+          <button type="submit" class="btn btn-primary w-100">Suscribirme ✈️</button>
+        </form>
+        <div class="map-container mt-3">
+          <h3 class="footer-heading">Ubicación</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1051.2575612087483!2d-65.29996631611341!3d-24.18550866512147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f433cd59b63%3A0xfb2e08060c8cc2b4!2sSecretaria%20de%20Turismo%20de%20Jujuy-%20Oficina%20de%20Información%20Turística!5e0!3m2!1ses!2sar!4v1776037110346!5m2!1ses!2sar"
+            width="100%" height="160" style="border:0;border-radius:8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación"></iframe>
+        </div>
       </div>
     </div>
-    <div>
-      <h3 class="footer-heading">Explorar</h3>
-      <ul class="footer-links">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="agencias.html">Agencias</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Información</h3>
-      <ul class="footer-links">
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Privacidad</a></li>
-        <li><a href="#">Términos</a></li>
-        <li><a href="#">Accesibilidad</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-heading">Newsletter</h3>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="tu@email.com" required aria-label="Email">
-        <button type="submit" class="btn btn-primary">Suscribirme ✈️</button>
-      </form>
-      <div class="footer-column map-section">
-          <div class="map-container">
-              <h3>Ubicación</h3>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1051.2575612087483!2d-65.29996631611341!3d-24.18550866512147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f433cd59b63%3A0xfb2e08060c8cc2b4!2sSecretaria%20de%20Turismo%20de%20Jujuy-%20Oficina%20de%20Información%20Turística!5e0!3m2!1ses!2sar!4v1776037110346!5m2!1ses!2sar" 
-                width="400" 
-                height="250" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-          </div>
-        </div>
-    </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
     <span>© 2026 NorthTravel Turismo.</span>
     <span>Hecho con ❤️ para exploradores</span>
   </div>
 </footer>
 
-<script>
-  const html = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  const logo = document.getElementById('logoimg');
-
-  function updateLogo(theme){
-    logo.style.opacity = 0;
-    setTimeout(() => {
-    logo.src = theme === 'dark'
-      ? logo.dataset.dark
-      : logo.dataset.light;
-      logo.style.opacity = 1;
-    },150);
-  }
-
-  if(saved) {
-    html.setAttribute('data-theme', saved);
-    updateLogo(saved);
-  }
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', t);
-    localStorage.setItem('theme', t);
-    updateLogo(t);
-  });
-  document.getElementById('hamburgerBtn').addEventListener('click', function(){
-    const nl = document.querySelector('.nav-links');
-    const open = nl.classList.toggle('mobile-open');
-    this.setAttribute('aria-expanded', open);
-    nl.style.cssText = open ? 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:var(--clr-surface);padding:20px;box-shadow:var(--shadow-lg);z-index:999' : '';
-  });
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault(); const btn = this.querySelector('button');
-    btn.textContent = '✅ ¡Suscrito!'; setTimeout(() => { btn.textContent = 'Suscribirme ✈️'; this.reset(); }, 3000);
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<!-- ★ Bootstrap 5.3 JS ★ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
